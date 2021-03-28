@@ -30,6 +30,7 @@ import {
     SiTypescript, SiSap
 } from 'react-icons/si'
 import {GiArtificialIntelligence} from 'react-icons/gi'
+import {BiPaint, IoDesktopOutline} from "react-icons/all";
 interface Props {
     size?: string
     className?: string
@@ -72,6 +73,8 @@ export const Icons = {
     'figma': (props ?: Props): JSX.Element => <SiFigma {...props}/>,
     'adobe xd': (props ?: Props): JSX.Element => <SiAdobexd {...props}/>,
     'sap':  (props ?: Props): JSX.Element => <SiSap {...props}/>,
+    'design':  (props ?: Props): JSX.Element =>  <BiPaint {...props} />,
+    'web': (props ?: Props): JSX.Element =>   <IoDesktopOutline {...props} />,
 }
 export const Icon = ({name, ...props}) => {
     return Icons[name]? Icons[name](props) : null
