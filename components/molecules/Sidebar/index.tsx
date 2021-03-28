@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {ContainerSidebar} from './styles'
-import {Button} from "../../atoms/Button/Common";
-import {Title} from "../../atoms/Title";
+import {Button} from "@/components/atoms/Button/Common";
+import {Title} from "@/components/atoms/Title";
 
 interface Props {
     isOpen?: boolean,
