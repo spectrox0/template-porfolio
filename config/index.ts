@@ -27,6 +27,11 @@ export const infoBiography: { name: string, value: string | number } [] = [{
 
 export const skills: Skill [] = [
     {
+        category: 'sap',
+        name: 'sap',
+        percentage: 80
+    },
+    {
         category: 'web',
         name: 'typescript',
         percentage: 80

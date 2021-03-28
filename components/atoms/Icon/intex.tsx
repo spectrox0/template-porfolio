@@ -27,7 +27,7 @@ import {
     SiFigma,
     SiSocketDotIo,
     SiTensorflow,
-    SiTypescript
+    SiTypescript, SiSap
 } from 'react-icons/si'
 import {GiArtificialIntelligence} from 'react-icons/gi'
 interface Props {
@@ -71,8 +71,8 @@ export const Icons = {
     'pandas': (props ?: Props): JSX.Element => <GiArtificialIntelligence {...props}/>,
     'figma': (props ?: Props): JSX.Element => <SiFigma {...props}/>,
     'adobe xd': (props ?: Props): JSX.Element => <SiAdobexd {...props}/>,
+    'sap':  (props ?: Props): JSX.Element => <SiSap {...props}/>,
 }
-
 export const Icon = ({name, ...props}) => {
     return Icons[name]? Icons[name](props) : null
 }
