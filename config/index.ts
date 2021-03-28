@@ -1,8 +1,7 @@
-import * as React from 'react'
 import {MultiLang} from "../models/Multilang";
 import {Skill} from '../models/Skill'
-import {SiTypescript,SiAdobexd,SiFirebase} from 'react-icons/si'
-import {FaAngular, FaReact,FaVuejs, FaFigma} from 'react-icons/fa'
+import {paletteColorsDark} from "../styles/variables";
+import {Service} from "../models/Service";
 
 export const imgProfile: string = require('images/profileImage.jpeg?webp');
 
@@ -28,47 +27,56 @@ export const infoBiography: { name: string, value: string | number } [] = [{
 export const skills: Skill [] = [
     {
         category: 'sap',
-        name: 'sap',
+        key: 'sap',
+        name: 'SAP',
         percentage: 80
     },
     {
         category: 'web',
-        name: 'typescript',
+        key: 'typescript',
+        name: 'Typescript',
         percentage: 80
     },
     {
         category: 'design',
-        name: 'figma',
+        key: 'figma',
+        name: 'Figma',
         percentage: 70
     },
     {
         category: 'design',
-        name: 'adobe xd',
+        key: 'adobe xd',
+        name: 'Adobe XD',
         percentage: 60
     },
     {
         category: 'web',
-        name: 'css3',
+        key: 'css3',
+        name: 'CSS3',
         percentage: 70
     },
     {
         category: 'web',
-        name: 'angular',
+        key: 'angular',
+        name: 'Angular +2',
         percentage: 70
     },
     {
         category: 'web',
-        name: 'vue',
+        key: 'vue',
+        name: 'Vue.js',
         percentage: 70
     },
     {
         category: 'web',
-        name: 'react',
+        key: 'react',
+        name: 'React.js',
         percentage: 40
     },
     {
         category: 'web',
-        name: 'firebase',
+        key: 'firebase',
+        name: 'Firebase',
         percentage: 70
     }
 ]
@@ -116,5 +124,29 @@ export const categoriesWork: CategoriesWork[] = [
         key: 'certificates',
         name: 'Certificates'
     },
-
 ]
+export const Services: Service[] = [
+    {
+        key: 'sap',
+        name: 'SAP architecture',
+        icon: 'sap',
+        description: 'ssasas'
+    },
+    {
+        key: 'design',
+        name: 'UI/UX design',
+        icon: 'design',
+        description: 'ssasas'
+    },
+    {
+        key: 'web',
+        name: 'Frontend Development',
+        icon: 'web',
+        description: 'ssasas'
+    },
+]
+export const colorCategory = {
+    'sap': paletteColorsDark.primary,
+    'design': paletteColorsDark.secondary,
+    'web': paletteColorsDark.error,
+}

@@ -1,16 +1,17 @@
 import * as React from 'react';
 import {useCountUp} from "react-countup";
-import {ContainerDonutChart} from './styles'
+import {ContainerDonutChart} from './style'
 
 interface Props {
     percentage: number,
     delay?: number
+    color?: string
 }
 
-export const DonutChart: React.FC<Props> = ({percentage, delay = 0, children}) => {
+export const DonutChart: React.FC<Props> = ({percentage, delay = 0, color}) => {
     const {countUp, reset, start} = useCountUp({end: percentage, delay})
     return (
-        <ContainerDonutChart active={true} viewBox="0 0 36 36" className="circular-chart orange">
+        <ContainerDonutChart color={color} active={true} viewBox="0 0 36 36" className="circular-chart orange">
             <path
                 className="circle-bg"
                 d="M18 2.0845

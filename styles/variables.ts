@@ -1,7 +1,7 @@
 export const paletteColorsDark = {
     primary: '#6bccef',
     primaryColorTransparent: (opacity :number):string =>  `rgba(107,204,239,${opacity})`,
-    secondary: '#006b92',
+    secondary: '#9cbc68',
     error: '#E44C65',
     background: '#1b262c',
     text: '#bbe1fa',

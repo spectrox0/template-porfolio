@@ -1,4 +1,7 @@
-export enum EnumSkill {
+export enum EnumIcon {
+    'github',
+    'telegram',
+    'linkedin',
     'vue',
     'react',
     'react native',
@@ -30,11 +33,6 @@ export enum EnumSkill {
     'figma',
     'adobe xd',
     'sap',
-}
-
-export interface Skill {
-    name: string,
-    key: keyof typeof EnumSkill,
-    category: string,
-    percentage: number
+    'design',
+    'web'
 }
