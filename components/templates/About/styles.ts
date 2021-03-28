@@ -20,7 +20,7 @@ export const ContainerAbout = styled(motion.section)`
   .container-info {
     position: relative;
     max-width: 95%;
-    width: 60rem;
+    width: 57rem;
     margin-left: auto;
     z-index: 3;
     backdrop-filter: blur(2px);

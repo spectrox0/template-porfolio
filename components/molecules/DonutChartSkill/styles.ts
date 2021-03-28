@@ -15,6 +15,9 @@ import {fontFamily, paletteColorsDark} from "../../../styles/variables";
   font-size: 4em;
   }
   .name {
-  text-transform: capitalize;
+  flex: 1;
+  font-size: .9em;
+  text-align: center;
+  text-transform: uppercase;
   }
   `
