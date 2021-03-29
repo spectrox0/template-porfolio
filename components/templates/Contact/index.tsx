@@ -1,9 +1,9 @@
 import * as React from 'react';
-import {Input} from "../../atoms/Input";
 import {Box} from "../../atoms/Box";
 import {ContainerContactTemplate} from "./styles";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import {Title} from "../../atoms/Title";
+import {ContactForm} from "../../organisms/Form/Contact";
 
 export const ContactTemplate = () => {
 
@@ -16,8 +16,7 @@ export const ContactTemplate = () => {
                             Contact
                             <b> me </b>
                         </Title>
-                        <Input type={'text'} value={'21'} onChange={() => {
-                        }} id={'2'} label={'33'}/>
+                        <ContactForm/>
                     </Box>
                 </div>
             </ContainerContactTemplate>

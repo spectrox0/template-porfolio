@@ -2,7 +2,7 @@ import * as React from 'react';
 import {ContainerButton} from './styles';
 
 
-export const Button: React.FC<React.HtmlHTMLAttributes<HTMLButtonElement>> = ({className, children, ...rest}) => {
+export const Button: React.FC<React.HtmlHTMLAttributes<HTMLButtonElement> & React.HTMLProps<HTMLButtonElement>> = ({className, children, ...rest}) => {
     return (
         <ContainerButton>
             <button className={`hover ${className}`} {...rest}>
