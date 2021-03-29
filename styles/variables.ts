@@ -48,5 +48,8 @@ export const breakpoint: Breakpoint = {
 export const fontFamily = {
     'Roboto': 'Roboto, sans-serif',
     'Montserrat': 'Montserrat , sans-serif',
-    'Playfair Display': '"Playfair Display" , sans-serif'
+    'Josefin Sans': '"Josefin Sans" , sans-serif'
 }
+
+
+export const primaryFontFamily = fontFamily["Josefin Sans"]

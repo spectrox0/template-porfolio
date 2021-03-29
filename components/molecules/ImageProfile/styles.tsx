@@ -1,21 +1,36 @@
-import styled, {keyframes} from "styled-components";
+import styled from "styled-components";
 
 
 interface Props {
     load?: boolean
 }
+
 export const ContainerImageProfile = styled.div<Props>`
   border-radius: 50%;
   position: relative;
-  display: ${({load}) => load? 'inline-flex' : 'none'};
-  width:100%;
+  display: ${({load}) => load ? 'inline-flex' : 'none'};
+  width: 100%;
+
   img {
     border-radius: 50%;
-    width:100%;
+    width: 100%;
+    height: 100%;
     opacity: 0.8;
     max-width: 100%;
     filter: grayscale(0.2);
+
+    &:nth-child(1) {
+      position: absolute;
+    }
+
+    &.image-blur {
+      position: relative;
+      z-index: 2;
+      transition: opacity .5s ease-in-out;
+       visibility: ${({load}) => load? 'hidden' : 'visible'};
+    }
   }
+
 
   &:after, &:before {
     content: "";
@@ -23,7 +38,7 @@ export const ContainerImageProfile = styled.div<Props>`
     z-index: 2;
     top: 50%;
     left: 50%;
-    transform: translate3d(-50%, -50%,0);
+    transform: translate3d(-50%, -50%, 0);
     box-shadow: 0 0 3px inset rgba(255, 255, 255, 0.6);
     width: 100%;
     height: 100%;
@@ -42,9 +57,4 @@ export const ContainerImageProfile = styled.div<Props>`
     border-left: solid 1px rgba(255, 255, 255, 0.5);
   }
 
-  &:hover {
-    img {
-      filter: none;
-    }
-  }
 `

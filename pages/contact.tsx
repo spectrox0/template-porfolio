@@ -1,11 +1,9 @@
 import  * as React from "react";
+import {ContactTemplate} from '@/components/templates/Contact'
 
-
-const Index : React.FC  = () => {
+const Contact : React.FC  = () => {
     return (
-        <div>
-
-        </div>
+        <ContactTemplate />
     )
 }
-export default Index;
+export default Contact;

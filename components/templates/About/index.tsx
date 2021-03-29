@@ -1,7 +1,7 @@
 import * as React from "react";
 import {ContainerAbout} from "./styles";
 import {propsPage} from "../../../utils/animations/transitionPage";
-import {colorCategory, imgProfile, infoBiography, Services, skills} from "../../../config";
+import {colorCategory, imgProfile, imgProfileBlur, infoBiography, Services, skills} from "../../../config";
 import {ImageProfile} from "@/components/molecules/ImageProfile";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import {Title} from '@/components/atoms/Title'
@@ -9,36 +9,25 @@ import {Text} from '@/components/atoms/Text'
 import {Icon} from "../../atoms/Icon/intex";
 import {Service} from "../../molecules/Service";
 import {DonutChartSkill} from "../../molecules/DonutChartSkill";
+import {Box} from "../../atoms/Box";
 
 const AboutTemplate: React.FC = () => {
     return (
         <PerfectScrollbar>
             <ContainerAbout {...propsPage}>
                 <div className={'container'}>
-                    <div className={'row d-flex flex-wrap align-items-center'}>
+                    <div className={'row d-flex flex-wrap align-items-center '}>
                         <div className={'col-sm-12 col-md-7'}>
-                            <ImageProfile src={imgProfile} className={'my-1'}/>
+                            <ImageProfile srcBlurImage={imgProfileBlur} src={imgProfile} className={'my-1'}/>
                         </div>
-                        <Title tagTitle={'h1'} alignText={'left'} fontSize={'3em'}
-                               className={'mb-5 col-sm-12 col-md-5 underline'}>
+                        <Title  tagTitle={'h1'} alignText={'left'} fontSize={'3em'}
+                               className={' col-sm-12 col-md-5 underline d-none d-md-flex '}>
                             About <strong> Me </strong>
                         </Title>
                     </div>
-                    <div className={'row row-info'}>
-                        <div className={'col-md-3'}>
-                            <div className={'container-services'}>
-                                <Title tagTitle={'h2'} fontSize={'1.7em'} fontWeight={'600'}> Services </Title>
-                                <div className={'list-services'}>
-                                    {Services.map((item, key) => {
-                                        return (
-                                            <Service className={'my-2'} color={colorCategory[item.key]} title={item.name} key={key} icon={<Icon name={item.icon}/>}/>
-                                        )
-                                    })}
-                                </div>
-                            </div>
-                        </div>
-                        <div className={'col-md-9'}>
-                            <div className={'container-info'}>
+                    <div className={'row row-info flex-sm-row-reverse'}>
+                        <div className={'col-md-9 my-2'}>
+                             <Box>
                                 <Title className={'my-2'} tagTitle={'h2'} fontSize={'1.7em'} fontWeight={'600'}
                                        alignText={'left'}> Hi i'm Viviana</Title>
                                 <Text fontSize={'1.5em'}> Me encanta el reggaeton duro, adicta al buen naruto y al
@@ -52,7 +41,7 @@ const AboutTemplate: React.FC = () => {
                                         </div>
                                     ))}
                                 </div>
-                                <Title className={'my-2'} tagTitle={'h2'} fontSize={'1.7em'} fontWeight={'600'}
+                                <Title className={'mt-3 mb-2'} tagTitle={'h2'} fontSize={'1.7em'} fontWeight={'600'}
                                        alignText={'left'}> Skills</Title>
                                 <div className={'row'}>
                                     {skills.map((item, i) => (
@@ -63,12 +52,21 @@ const AboutTemplate: React.FC = () => {
                                                          icon={<Icon className={'icon'} name={item.key}/>}/>
                                     ))}
                                 </div>
-                                <Text> jupsu clones de sombra, picar diamante en minecraft, controlar carteles de
-                                    naruto </Text>
-                                <Title className={'my-2'} tagTitle={'h2'} fontSize={'1.7em'} fontWeight={'600'}
-                                       alignText={'left'}> Interests</Title>
-                                <Text> Putas dinero naruto robar bebes trafico por costa y tierra</Text>
-                            </div>
+                            </Box>
+                        </div>
+                        <div className={'col-md-3 my-2'}>
+                            <Box>
+                                <Title className={'my-2'} tagTitle={'h2'} fontSize={'1.7em'} fontWeight={'600'}> Services </Title>
+                                <div className={'row justify-content-center align-items-center'}>
+                                    {Services.map((item, key) => {
+                                        return (
+                                            <div key={key} className={'col-sm-6 col-md-12'}>
+                                            <Service className={'my-2'} color={colorCategory[item.key]} title={item.name}  icon={<Icon name={item.icon}/>}/>
+                                            </div>
+                                        )
+                                    })}
+                                </div>
+                            </Box>
                         </div>
                     </div>
                 </div>

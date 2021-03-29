@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {fontFamily, paletteColorsDark} from "@/styles/variables";
+import {fontFamily, paletteColorsDark, primaryFontFamily} from "@/styles/variables";
 
 interface Props {
     active: boolean,
@@ -33,7 +33,7 @@ export const ContainerDonutChart = styled.svg<Props>`
 
   .percentage {
     fill: #fff;
-    font-family: ${fontFamily.Montserrat};
+    font-family:  ${primaryFontFamily};
     font-size: 0.3em;
     text-anchor: middle;
   }
