@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {fontFamily, paletteColorsDark} from '@/styles/variables'
+import {fontFamily,primaryFontFamily, paletteColorsDark} from '@/styles/variables'
 
 interface Props {
     colorText?: string,
@@ -8,7 +8,7 @@ interface Props {
 }
 
 export const ContainerItemNavigation = styled.li<Props>`
-  font-family: ${fontFamily.Roboto};
+  font-family:  ${primaryFontFamily};
   color: #fff;
   flex: 1;
   position: relative;

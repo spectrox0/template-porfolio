@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {fontFamily, paletteColorsDark} from "../../../../styles/variables";
+import {fontFamily,primaryFontFamily, paletteColorsDark} from "../../../../styles/variables";
 
 
 export const ContainerButton = styled.div`
@@ -18,7 +18,7 @@ export const ContainerButton = styled.div`
     }
   }
   button {
-    font-family: ${fontFamily.Montserrat};
+    font-family: ${primaryFontFamily};
     color:  rgba(255,255,255,0.6);
     font-weight: 300;
     flex: 1;

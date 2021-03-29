@@ -3,7 +3,9 @@ import {Skill} from '../models/Skill'
 import {paletteColorsDark} from "../styles/variables";
 import {Service} from "../models/Service";
 
-export const imgProfile: string = require('images/profileImage.jpeg?webp');
+
+export const imgProfile: string =  require('images/profileImage.jpeg?webp')
+export const imgProfileBlur: string = require('images/profileImage.jpeg?lqip')
 
 export const descriptionAboutMe: MultiLang = {
     "es": "Hola soy Viviana",

@@ -1,15 +1,7 @@
-import styled, {keyframes} from "styled-components";
+import styled from "styled-components";
 import {breakpoint, fontFamily} from "../../../styles/variables";
 import {motion} from "framer-motion";
 
-const animation = keyframes`
-  0% {
-    background-position: 0% 50%;
-  }
-  100% {
-    background-position: 100% 50%;
-  }
-`
 
 export const ContainerHomeTemplate = styled(motion.div)`
   position: relative;
@@ -18,9 +10,11 @@ export const ContainerHomeTemplate = styled(motion.div)`
   margin: 0 auto;
   padding: 2rem 4%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-
-  .title {
+  .body-home {
     z-index: 10;
     position: absolute;
     left: 50%;
@@ -29,26 +23,14 @@ export const ContainerHomeTemplate = styled(motion.div)`
     font-family: ${fontFamily.Montserrat};
     text-align: center;
     padding: 1rem 1.3rem;
-    border-radius: 10px;
     width: 100%;
-    
+
   }
 
-  .title h1 {
-    margin: 0;
-    padding: 0.5rem 0;
-    letter-spacing: 2px;
-    font-weight: 300;
-    color: rgba(255, 255, 255, 0.6);
-    text-shadow: 0 0 3px rgba(255, 255, 255, 0.6);
-    font-size: 3em;
-    background:  linear-gradient(45deg, #fff, rgba(255,255,255,0.1));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
 }
 
-.title h3 {
+h3 {
+  position: relative;
   bottom: 0;
   width: 100%;
   text-align: center;
@@ -58,11 +40,7 @@ export const ContainerHomeTemplate = styled(motion.div)`
   margin: 0;
   line-height: 1em;
   color: rgba(255, 255, 255, 0.8);
-  text-shadow: 0 0 2px #fff;
   letter-spacing: 2px;
-  background:  linear-gradient(45deg, #fff, rgba(255,255,255,0.5));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 .select-locale {

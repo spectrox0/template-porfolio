@@ -11,20 +11,21 @@ export const ContainerPortfolioTemplate = styled(motion.section)<Props>`
   height: 100%;
   .toggle {
     position: fixed;
-    top: calc(${heightNavbar} + .5rem);
-    font-size: 1.2em;
-    left:.5rem;
-    width: 1.8rem;
+    top: calc(${heightNavbar} + .3rem);
+
+    right 1.5rem;
+    width: 2.5rem;
     opacity: 0.8;
-    height: 1.8rem;
+    font-size: 1.5em;
+    height: 2.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-top: solid 1px #fff;
-    border-left: solid 1px #fff;
+    border-bottom: solid 1px #fff;
+    border-right: solid 1px #fff;
     box-shadow: 0 0 2px inset #fff;
     border-radius: 50%;
-    background-color: rgba(0,0,0,0.2);
+    background-color: rgba(0,0,0,0.4);
     z-index: 5;
     cursor: pointer;
     color: #fff;

@@ -16,8 +16,8 @@ export const DonutChartSkill: React.FC<Props> = ({name, className, icon, color, 
 
     return (
         <ContainerDonutChartSkill className={className} color={color}>
-            <Text className={'d-flex align-items-center'}>
-                <span className="name"> {name}</span>
+            <Text className={'name'}>
+                 {name}
             </Text>
             <div className={'position-relative'}>
                 {icon}

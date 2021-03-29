@@ -1,5 +1,5 @@
 import {createGlobalStyle} from 'styled-components';
-import {fontFamily, paletteColorsDark, paletteColorsLight} from "./variables";
+import {fontFamily, paletteColorsDark, primaryFontFamily} from "./variables";
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -22,7 +22,7 @@ export const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
-    font-family: ${fontFamily["Playfair Display"]};
+    font-family: ${primaryFontFamily};
     min-height: 100%;
     &, * {
       box-sizing: border-box;

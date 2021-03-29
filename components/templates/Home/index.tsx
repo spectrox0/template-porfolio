@@ -9,6 +9,7 @@ import {init} from './AnimatedText'
 import {useRouter} from "next/router";
 import {Button} from "../../atoms/Button/Common";
 import {AiOutlineArrowRight} from "react-icons/ai";
+import {Title} from "../../atoms/Title";
 
 const locales = [
     {key: 'en', src: require('images/united-states.svg')},
@@ -32,18 +33,18 @@ export const HomeTemplate: React.FC = () => {
     return (
         <ContainerHomeTemplate id={'container-home'} {...propsPage}>
             <BarContact/>
-            <div className="title">
-                <h1> Viviana <strong> Tepedino </strong></h1>
+            <div className="container d-flex flex-column align-items-center">
+                <Title fontSize={'3em'} tagTitle={'h1'}> Viviana <strong> Tepedino </strong></Title>
                 <h3 className='text'/>
-                <Button type={'text'}>
-                    Check my Works <AiOutlineArrowRight size={'1em'} />
+                <Button className={'pl-4 pr-3'}>
+                    Check my Works <AiOutlineArrowRight size={'1em'}/>
                 </Button>
             </div>
             <div className={'select-locale'}>
                 {locales.map((item) => (
                     <div className={'container-img'}>
-                    <img className={item.key === router.locale ? 'active' : ''} key={item.key} alt={item.key}
-                         src={item.src} onClick={() => changeLocale(item.key)}/>
+                        <img className={item.key === router.locale ? 'active' : ''} key={item.key} alt={item.key}
+                             src={item.src} onClick={() => changeLocale(item.key)}/>
                     </div>
                 ))}
             </div>

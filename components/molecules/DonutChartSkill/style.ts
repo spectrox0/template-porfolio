@@ -19,6 +19,5 @@ export const ContainerDonutChartSkill = styled.div`
 
   .name {
     flex: 1;
-    font-size: .9em;
   }
 `
