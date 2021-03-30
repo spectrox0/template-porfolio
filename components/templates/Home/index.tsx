@@ -42,8 +42,8 @@ export const HomeTemplate: React.FC = () => {
             </div>
             <div className={'select-locale'}>
                 {locales.map((item) => (
-                    <div className={'container-img'}>
-                        <img className={item.key === router.locale ? 'active' : ''} key={item.key} alt={item.key}
+                    <div key={item.key} className={'container-img'}>
+                        <img className={item.key === router.locale ? 'active' : ''} alt={item.key}
                              src={item.src} onClick={() => changeLocale(item.key)}/>
                     </div>
                 ))}

@@ -1,20 +1,25 @@
 import styled from "styled-components";
 import {paletteColorsDark, paletteColorsLight, primaryFontFamily} from "../../../styles/variables";
 
-
-export const ContainerInput = styled.div`
+interface Props {
+    textarea?: boolean
+}
+export const ContainerInput = styled.div<Props>`
   position: relative;
   flex: 1;
-
-  label, input {
+  height: ${({textarea}) => textarea? '100%' : 'auto'};
+  label, input, textarea{
     color: #fff;
   }
 
   label {
     position: absolute;
   }
-
-  input {
+  textarea {
+    height: 100%;
+    resize: none;
+  }
+  input,textarea {
     width: 100%;
     outline: none;
     padding: .5em .8em;

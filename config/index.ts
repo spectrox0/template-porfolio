@@ -4,8 +4,8 @@ import {paletteColorsDark} from "../styles/variables";
 import {Service} from "../models/Service";
 
 
-export const imgProfile: string =  require('images/profileImage.jpeg?webp')
-export const imgProfileBlur: string = require('images/profileImage.jpeg?lqip')
+export const imgProfile: string = require('images/profileImage.jpg?webp')
+export const imgProfileBlur: string = require('images/profileImage.jpg?lqip')
 
 export const descriptionAboutMe: MultiLang = {
     "es": "Hola soy Viviana",
@@ -14,13 +14,14 @@ export const descriptionAboutMe: MultiLang = {
 
 export const urlCV = ''
 
+
 export const infoBiography: { name: string, value: string | number } [] = [{
     name: "age",
     value: 24
 },
     {name: 'freelance', value: 'available'},
     {name: 'experience', value: '3 years'},
-    {name: 'email', value: 'vivinaruto@gmail.com'},
+    {name: 'email', value: 'vivitepedino@gmail.com'},
     {
         name: 'degree', value: 'bachelor'
     }
@@ -37,51 +38,53 @@ export const skills: Skill [] = [
         category: 'web',
         key: 'typescript',
         name: 'Typescript',
-        percentage: 80
+        percentage: 50
     },
     {
         category: 'design',
         key: 'figma',
         name: 'Figma',
-        percentage: 70
+        percentage: 80
     },
     {
         category: 'design',
         key: 'adobe xd',
         name: 'Adobe XD',
-        percentage: 60
+        percentage: 70
     },
     {
         category: 'web',
         key: 'css3',
         name: 'CSS3',
-        percentage: 70
+        percentage: 50
     },
     {
         category: 'web',
         key: 'angular',
         name: 'Angular +2',
-        percentage: 70
+        percentage: 50
     },
     {
         category: 'web',
         key: 'vue',
         name: 'Vue.js',
-        percentage: 70
+        percentage: 40
     },
     {
         category: 'web',
         key: 'react',
         name: 'React.js',
-        percentage: 40
+        percentage: 30
     },
     {
         category: 'web',
         key: 'firebase',
         name: 'Firebase',
-        percentage: 70
+        percentage: 50
     }
-]
+].sort((a, b) => {
+    if (a.category > b.category) return 1; else return -1
+})
 
 export const interest = []
 
@@ -110,10 +113,6 @@ interface CategoriesWork {
 }
 
 export const categoriesWork: CategoriesWork[] = [
-    {
-        key: "sap",
-        name: "SAP"
-    },
     {
         key: 'web',
         name: "Web Development",
@@ -151,4 +150,6 @@ export const colorCategory = {
     'sap': paletteColorsDark.primary,
     'design': paletteColorsDark.secondary,
     'web': paletteColorsDark.error,
+    'certificate': paletteColorsDark.primary,
 }
+

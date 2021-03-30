@@ -8,7 +8,6 @@ interface Props {
 export const ContainerImageProfile = styled.div<Props>`
   border-radius: 50%;
   position: relative;
-  display: ${({load}) => load ? 'inline-flex' : 'none'};
   width: 100%;
 
   img {

@@ -61,14 +61,7 @@ export const GlobalStyle = createGlobalStyle`
   p,
   img,
   a {
-    -webkit-touch-callout: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-tap-highlight-color: transparent;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    
   }
 
   div {
