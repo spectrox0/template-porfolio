@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100%;
     -webkit-tap-highlight-color: transparent !important;
-    cursor: none !important;
+   // cursor: none !important;
     overflow: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;

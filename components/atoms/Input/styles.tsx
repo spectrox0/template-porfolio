@@ -26,7 +26,20 @@ export const ContainerInput = styled.div<Props>`
     letter-spacing: 0.11em;
     border: none;
     background-color: transparent;
-    font-family: ${primaryFontFamily};
+    font-family: ${primaryFontFamily};   
+    &:not(:placeholder-shown):not(:valid) {
+      & + .effect-underline {
+        width: 100%;
+        background-image: linear-gradient(to right,${paletteColorsDark.errorTransparent(0)}, ${paletteColorsDark.error}, ${paletteColorsDark.errorTransparent(0)});
+      }
+  }
+    /* Show green borders when valid */
+     &:valid:focus{
+      & + .effect-underline {
+        width: 100%;
+        background-image: linear-gradient(to right,${paletteColorsDark.primaryColorTransparent(0)}, ${paletteColorsDark.primary}, ${paletteColorsDark.primaryColorTransparent(0)});
+      }
+    }
   }
 
   &:after {
@@ -39,15 +52,15 @@ export const ContainerInput = styled.div<Props>`
     opacity: 0.3;
     bottom: 0;
   }
-  &:before {
+  .effect-underline {
     z-index: 2;
     content: "";
     position: absolute;
-    background-image: linear-gradient(to right, ${paletteColorsDark.primary}, ${paletteColorsDark.primaryColorTransparent(0)});
-    left:0;
-    height: 1px;
+    left:50%;
+    height: 2px;
     width: 0;
     transition: width .4s ease-in-out;
+    transform: translate3d(-50% ,0 ,0 );
     opacity: 1;
     bottom: 0;
   }

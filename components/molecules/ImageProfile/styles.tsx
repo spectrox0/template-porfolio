@@ -9,14 +9,13 @@ export const ContainerImageProfile = styled.div<Props>`
   border-radius: 50%;
   position: relative;
   width: 100%;
-
+  z-index: -1;
   img {
     border-radius: 50%;
     width: 100%;
     height: 100%;
     opacity: 0.8;
     max-width: 100%;
-    filter: grayscale(0.2);
 
     &:nth-child(1) {
       position: absolute;
@@ -24,9 +23,10 @@ export const ContainerImageProfile = styled.div<Props>`
 
     &.image-blur {
       position: relative;
-      z-index: 2;
+      z-index: 1;
+      transform: translate3d(0,0,0);
       transition: opacity .5s ease-in-out;
-       visibility: ${({load}) => load? 'hidden' : 'visible'};
+      opacity: ${({load}) => +!load};
     }
   }
 

@@ -6,10 +6,11 @@ import {ImageProfile} from "@/components/molecules/ImageProfile";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import {Title} from '@/components/atoms/Title'
 import {Text} from '@/components/atoms/Text'
-import {Icon} from "../../atoms/Icon/intex";
+import {Icon} from "../../atoms/Icon";
 import {Service} from "../../molecules/Service";
 import {DonutChartSkill} from "../../molecules/DonutChartSkill";
 import {Box} from "../../atoms/Box";
+import {Button} from "../../atoms/Button/Common";
 
 const AboutTemplate: React.FC = () => {
     return (
@@ -66,6 +67,11 @@ const AboutTemplate: React.FC = () => {
                                         )
                                     })}
                                 </div>
+                            </Box>
+                            <Box className={'mt-3 mb-2'}>
+                                <Button>
+                                    Download my CV
+                                </Button>
                             </Box>
                         </div>
                     </div>

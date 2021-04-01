@@ -16,7 +16,7 @@ export const Service: React.FC<Props> = ({className, title, icon, color}) => {
             <div className={'icon mb-2'}>
                 {icon}
             </div>
-            <Title fontSize={'1.3em'} fontWeight={'500'} tagTitle={'h3'}>
+            <Title fontSize={'1.2em'} fontWeight={'500'} tagTitle={'h3'}>
                 {title}
             </Title>
         </ContainerService>

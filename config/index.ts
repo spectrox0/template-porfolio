@@ -1,8 +1,15 @@
 import {MultiLang} from "../models/Multilang";
-import {Skill} from '../models/Skill'
+import {EnumSkill, Skill} from '../models/Skill'
 import {paletteColorsDark} from "../styles/variables";
 import {Service} from "../models/Service";
 
+
+interface SocialNetworks {
+    linkedin: {name: string, value: string, href?: string}
+    github: {name: string, value: string, href?: string}
+    telegram: {name: string, value: string, href?: string}
+    email: {name: string, value: string, href?: string}
+}
 
 export const imgProfile: string = require('images/profileImage.jpg?webp')
 export const imgProfileBlur: string = require('images/profileImage.jpg?lqip')
@@ -15,13 +22,34 @@ export const descriptionAboutMe: MultiLang = {
 export const urlCV = ''
 
 
+export const socialNetwork: SocialNetworks = {
+    linkedin: {
+        name: "Linkedin",
+        value: "vivitepedino@gmail.com",
+        href: "/"
+    },
+    github: {
+        name: "Github",
+        value: "vivitepedino@gmail.com",
+        href: "/"
+    },
+    telegram: {
+        name: "Telegram",
+        value: "@viviana"
+    },
+    email: {
+        name: "Email",
+        value: "vivitepedino@gmail.com"
+    }
+}
+
 export const infoBiography: { name: string, value: string | number } [] = [{
     name: "age",
     value: 24
 },
     {name: 'freelance', value: 'available'},
     {name: 'experience', value: '3 years'},
-    {name: 'email', value: 'vivitepedino@gmail.com'},
+    {name: 'email', value: socialNetwork.email.value},
     {
         name: 'degree', value: 'bachelor'
     }
@@ -30,55 +58,55 @@ export const infoBiography: { name: string, value: string | number } [] = [{
 export const skills: Skill [] = [
     {
         category: 'sap',
-        key: 'sap',
+        key: EnumSkill.sap,
         name: 'SAP',
         percentage: 80
     },
     {
         category: 'web',
-        key: 'typescript',
+        key: EnumSkill.typescript,
         name: 'Typescript',
         percentage: 50
     },
     {
         category: 'design',
-        key: 'figma',
+        key:  EnumSkill.figma,
         name: 'Figma',
         percentage: 80
     },
     {
         category: 'design',
-        key: 'adobe xd',
+        key: EnumSkill["adobe xd"],
         name: 'Adobe XD',
         percentage: 70
     },
     {
         category: 'web',
-        key: 'css3',
+        key: EnumSkill.css3,
         name: 'CSS3',
         percentage: 50
     },
     {
         category: 'web',
-        key: 'angular',
+        key: EnumSkill.angular,
         name: 'Angular +2',
         percentage: 50
     },
     {
         category: 'web',
-        key: 'vue',
+        key: EnumSkill.vue,
         name: 'Vue.js',
         percentage: 40
     },
     {
         category: 'web',
-        key: 'react',
+        key: EnumSkill.react,
         name: 'React.js',
         percentage: 30
     },
     {
         category: 'web',
-        key: 'firebase',
+        key: EnumSkill.firebase,
         name: 'Firebase',
         percentage: 50
     }
@@ -88,17 +116,8 @@ export const skills: Skill [] = [
 
 export const interest = []
 
-interface SocialNetworks {
-    linkedin: string,
-    github: string
-    telegram: string
-}
 
-export const socialNetwork: SocialNetworks = {
-    linkedin: "",
-    github: "",
-    telegram: ""
-}
+
 
 enum EnumCategories {
     sap,
@@ -152,4 +171,7 @@ export const colorCategory = {
     'web': paletteColorsDark.error,
     'certificate': paletteColorsDark.primary,
 }
+
+
+
 

@@ -12,6 +12,7 @@ export const Input: React.FC<FieldAttributes<Props>> = ({as ,className, label, i
     return (
         <ContainerInput className={className} textarea={as==='textarea'}>
             <Field id={id} as={as} {...rest} />
+            <div className={'effect-underline'} />
         </ContainerInput>
     )
 }
