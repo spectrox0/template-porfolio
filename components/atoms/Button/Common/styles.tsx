@@ -10,7 +10,7 @@ export const ContainerButton = styled.div`
   background-color: rgba(0,0,0,0.2);
   max-width: 400px;
   border-radius: 10px;
-
+  transition: opacity 0.4 ease-in-out;
   button {
     font-family: ${primaryFontFamily};
     color:  rgba(255,255,255,0.6);
@@ -54,7 +54,6 @@ export const ContainerButton = styled.div`
     height: calc(100% - .4rem);
   }
    &:hover {
-      opacity: 0.6;
       button {
         color: ${ ({color}) => color || paletteColorsDark.primary};
         text-shadow: 0 0 3px ${({color}) => color || paletteColorsDark.primary};
@@ -63,5 +62,8 @@ export const ContainerButton = styled.div`
               border-color:${ ({color}) => color || paletteColorsDark.primary};
                box-shadow: inset 0 0 3px ${ ({color}) => color || paletteColorsDark.primary};;
               }
+    }
+    &:active {
+    opacity: 0.7;
     }
 `

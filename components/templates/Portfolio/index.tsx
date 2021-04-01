@@ -7,6 +7,7 @@ import PerfectScrollbar from 'react-perfect-scrollbar'
 import {CardWork} from "../../molecules/Card/Work";
 import {propsPageSimple} from "../../../utils/animations/transitionPage";
 import {AiOutlineFullscreen, AiOutlineFullscreenExit} from "react-icons/ai";
+import {categoriesWork} from "../../../config";
 
 const images = [
     "https://picsum.photos/200/300?image=1050",
@@ -22,17 +23,7 @@ const images = [
     "https://picsum.photos/300/300?image=420",
     "https://picsum.photos/300/300?image=777",
 ]
-const items: Item [] = [
-    {
-        name: 'SAP'
-    }, {
-        name: 'Web Development'
-    }, {
-        name: 'UI/UX design'
-    }, {
-        name: 'Certificates'
-    }
-]
+
 export const PortfolioTemplate: React.FC = () => {
     const [isOpenSidebar, setOpenSidebar] = React.useState<boolean>((() => window.innerWidth > 700)())
 
@@ -43,7 +34,7 @@ export const PortfolioTemplate: React.FC = () => {
                 <div className={'toggle'} onClick={() => setOpenSidebar(prevState => !prevState)}>
                     {!isOpenSidebar ? <AiOutlineFullscreenExit/> : <AiOutlineFullscreen/>}
                 </div>
-                <Sidebar title={'Works'} items={items} isOpen={isOpenSidebar}/>
+                <Sidebar title={'Works'} items={categoriesWork} isOpen={isOpenSidebar}/>
                 <div className={'wrapper-portfolio'}>
                     <div className={'container'}>
                         <ResponsiveMasonry

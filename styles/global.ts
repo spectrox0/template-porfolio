@@ -17,7 +17,7 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100%;
     -webkit-tap-highlight-color: transparent !important;
-    cursor: none !important;
+   // cursor: none !important;
     overflow: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -61,14 +61,7 @@ export const GlobalStyle = createGlobalStyle`
   p,
   img,
   a {
-    -webkit-touch-callout: none;
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-tap-highlight-color: transparent;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    
   }
 
   div {

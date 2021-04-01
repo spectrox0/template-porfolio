@@ -8,10 +8,11 @@ interface Props {
     id: string,
 }
 
-export const Input: React.FC<FieldAttributes<Props>> = ({className, label, id,...rest}) => {
+export const Input: React.FC<FieldAttributes<Props>> = ({as ,className, label, id,...rest}) => {
     return (
-        <ContainerInput className={className}>
-            <Field id={id} {...rest} />
+        <ContainerInput className={className} textarea={as==='textarea'}>
+            <Field id={id} as={as} {...rest} />
+            <div className={'effect-underline'} />
         </ContainerInput>
     )
 }

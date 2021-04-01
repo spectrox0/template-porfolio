@@ -2,6 +2,7 @@ import * as React from 'react';
 import {ContainerSidebar} from './styles'
 import {Button} from "@/components/atoms/Button/Common";
 import {Title} from "@/components/atoms/Title";
+import {colorCategory} from "../../../config";
 
 interface Props {
     isOpen?: boolean,
@@ -10,7 +11,8 @@ interface Props {
 }
 
 export interface Item {
-    name: string
+    name: string,
+    key: string
 }
 
 export const Sidebar: React.FC<Props> = ({isOpen = false, items = [], title}) => {
@@ -20,8 +22,8 @@ export const Sidebar: React.FC<Props> = ({isOpen = false, items = [], title}) =>
                 {title}
             </Title>
             <div className={'list'}>
-                {items.map((item, index) => (
-                    <Button type={'text'} key={index}> {item.name}</Button>
+                {items.map((item) => (
+                    <Button key={item.key} color={colorCategory[item.key]}> {item.name}</Button>
                 ))}
             </div>
         </ContainerSidebar>

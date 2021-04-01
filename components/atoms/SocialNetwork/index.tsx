@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {ContainerSocialNetwork} from "./styles";
-
+import {onMouseOver, onMouseLeave} from '../../../helpers/cursor'
 export interface Props {
     icon: React.FC<any>,
     url: string,
@@ -10,8 +10,8 @@ export interface Props {
 export const SocialNetwork: React.FC<Props> = ({icon: Icon, url, name}) => {
 
     return (
-        <ContainerSocialNetwork href={url} target={"_blank"}>
-            <Icon color={'#fff'}/>
+        <ContainerSocialNetwork href={url} target={"_blank"} onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>
+            <Icon color={'#fff'}  />
         </ContainerSocialNetwork>
     )
 }

@@ -1,10 +1,12 @@
 import * as React from 'react';
 import {ContainerBox} from "./styles";
 
-
-export const Box: React.FC = ({children}) => {
+interface Props {
+    className?:string
+}
+export const Box: React.FC<Props> = ({children, className}) => {
     return (
-        <ContainerBox>
+        <ContainerBox className={className}>
             {children}
         </ContainerBox>
     )

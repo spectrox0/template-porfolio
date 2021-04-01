@@ -2,7 +2,8 @@ import * as React from 'react'
 import {ContainerNavbar} from './styles'
 import {ItemNavigation} from "@/components/atoms/ItemNavigation";
 import {useRouter} from "next/router";
-import {AiOutlineHome} from 'react-icons/ai'
+import {AiOutlineAppstore, AiOutlineContacts, AiOutlineHome} from 'react-icons/ai'
+import {ImProfile} from "react-icons/im";
 interface Route {
     text?: string
     route: string
@@ -15,14 +16,14 @@ interface Props {
 }
 
 const routesNavbar: Route[] = [
-    {text: 'About', route: '/about'},
-    {text: 'portfolio', route: '/portfolio'},
     {
         route: '/',
+        text: 'Home',
         icon: (props) => <AiOutlineHome {...props} />,
     },
-    {text: 'Contact', route: '/contact'},
-    {text: 'resume', route: '/resume '}]
+    {text: 'About', route: '/about' , icon: (props) => <ImProfile {...props} />},
+    {text: 'portfolio', route: '/portfolio' , icon: (props) => <AiOutlineAppstore {...props} />},
+    {text: 'Contact', route: '/contact', icon: (props) => <AiOutlineContacts {...props} /> }]
 
 export const Navbar: React.FC<Props> = ({isOpen = false, routes = routesNavbar}) => {
     const {pathname, locale} = useRouter();

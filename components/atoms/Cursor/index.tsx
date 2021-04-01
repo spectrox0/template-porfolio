@@ -14,20 +14,9 @@ export const Cursor: React.FC<Props> = ({color}) => {
                 cursor.style.left = e.pageX + 'px';
             }
         }
-        const handlingHover = ({target}) => {
-            if (cursor) {
-                if (target && target.className && target.className.length) {
-                    if (target.className.includes('hover')) {
-                        cursor.classList.add('hover')
-                    } else cursor.classList.remove('hover')
-                } else cursor.classList.remove('hover')
-            }
-        }
-        window.addEventListener('mouseover', handlingHover);
         window.addEventListener('mousemove', handlingMoveCursor)
         return () => {
             window.removeEventListener('mousemove', handlingMoveCursor)
-            window.removeEventListener('mouseover', handlingHover);
         }
     }, [])
     return (
