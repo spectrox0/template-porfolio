@@ -16,25 +16,26 @@ export const ContainerCardWork = styled.div`
     transition: transform .3s ease-in-out;
   }
   &:after, &:before {
+    opacity: 0.7;
     content: "";
     position: absolute;
     z-index: 2;
     top: 50%;
     left:50%;
     transform: translate(-50% , -50%);
-    box-shadow: 0 0 3px inset rgba(255,255,255,0.6);
+    box-shadow: inset 0 0 3px #fff;
     width: 100%;
     height: 100%;
   }
   &:before {
-    border-top: solid 1px rgba(255,255,255,0.5);
-    border-left: solid 1px rgba(255,255,255,0.5);
+    border-top: solid 1px rgba(255,255,255,1);
+    border-left: solid 1px rgba(255,255,255,1);
     width: calc(100% - .5rem);
     height: calc(100% - .5rem);
   }
   &:after {
-    border-bottom: solid 1px rgba(255,255,255,0.5);
-    border-right: solid 1px rgba(255,255,255,0.5);
+    border-bottom: solid 1px rgba(255,255,255,1);
+    border-right: solid 1px rgba(255,255,255,1);
   }
   .info {
     position: absolute;
@@ -64,6 +65,7 @@ export const ContainerCardWork = styled.div`
     img {
       transform: scale(1.15) rotate(-5deg);
     }
+ 
     .info {
       opacity: 1;
     }

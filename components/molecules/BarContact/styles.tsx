@@ -9,4 +9,8 @@ export const ContainerBarContact = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  backdrop-filter: blur(3px);
+  background: rgba(0,0,0,0.3);
+  border-radius: 500px;
+  margin: 1rem .5rem;
 `

@@ -1,17 +1,34 @@
 import * as React from 'react';
 import {ContainerCardWork} from './styles'
-import {onMouseOver, onMouseLeave} from '../../../../helpers/cursor'
+import {onMouseLeave, onMouseOver} from '../../../../helpers/cursor'
+import {WorkDesign} from "../../../../models/WorkDesign";
+
 interface Props {
-    imgSrc: string,
-    name: string,
-    id?: number | string
-    onClick?: () => void
+    onClick?: (work: WorkDesign, coordinate: { x: number, y: number }) => void
 }
 
-export const CardWork: React.FC<Props> = ({imgSrc, name, id, onClick}) => {
+export const CardWork: React.FC<Props & WorkDesign> = ({
+                                                           img,
+                                                           skills,
+                                                           description,
+                                                           date,
+                                                           images,
+                                                           link,
+                                                           name,
+                                                           id,
+                                                           onClick
+                                                       }) => {
+    const selectWork = (e) => {
+            const x = e.pageX
+            const y =  e.pageY
+            if (onClick) {
+                onClick({img, name, id, skills, link, images, description, date}, {x, y} )
+            }
+
+    }
     return (
-        <ContainerCardWork onClick={onClick} onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} >
-            <img src={imgSrc} alt={name}/>
+        <ContainerCardWork onClick={selectWork} onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>
+            <img src={img.src} alt={name}/>
             <div className={'info'}>
                 <h4> {name}</h4>
             </div>

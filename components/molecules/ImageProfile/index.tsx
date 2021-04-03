@@ -14,9 +14,15 @@ export const ImageProfile: React.FC<Props & PropsImage> = ({
                                                                ...rest
                                                            }) => {
     const [load, setLoad] = React.useState<boolean>(false)
+    const imgRef = React.useRef<HTMLImageElement>(null)
+    React.useEffect(() => {
+        if (imgRef.current && imgRef.current.complete) {
+            setLoad(true)
+        }
+    }, [])
     return (
         <ContainerImageProfile className={className} load={load} {...rest}>
-            <Image height={height} width={width} setLoad={setLoad} {...rest} />
+            <Image refImage={imgRef} height={height} width={width} setLoad={setLoad} {...rest} />
             <img className={'image-blur'} src={rest.srcBlurImage} alt={''}/>
         </ContainerImageProfile>
     )

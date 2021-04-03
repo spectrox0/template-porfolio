@@ -20,9 +20,10 @@
   "name": "nombre",
   "send": "enviar",
   "all": "todos",
+  "portfolio": "portafolio",
   "my skills": "mis habilidades",
   "residence": "residencia",
-  "download my cv": "descargar mi cv",
+  "download my cv": "Descargar mi CV",
   "fast delivery": "rapida entrega",
   "app development": "desarrollo de apps",
   "my": "mis",
@@ -33,5 +34,9 @@
   "fast delivery.description": "Rapido desarrollo con tiempos de entrega puntuales",
   "app development.description" : "Desarrollo de aplicaciones mobiles y de escritorio",
   "available": "disponible",
-  "degree": "degree"
+  "degree": "degree",
+  "check my works": "Mira mis trabajos",
+  "Engineer Systems": "Ingeniera de Sistemas",
+  "SAP Architecture": "Arquitecto de soluciones SAP",
+  "UI/UX Design": "Diseño UI/UX"
 }

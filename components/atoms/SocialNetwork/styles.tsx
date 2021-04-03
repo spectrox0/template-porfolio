@@ -6,7 +6,6 @@ export const ContainerSocialNetwork = styled.a`
   backdrop-filter: blur(3px);
   border-radius: 50%;
   height: 2.5rem;
-  margin-bottom: 1rem;
   margin-right: .5rem;
   margin-left: .5rem;
   width: 2.5rem;
@@ -14,7 +13,6 @@ export const ContainerSocialNetwork = styled.a`
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  background-color: rgba(0, 0, 0, 0.2);
   position: relative;
 
   &:after, &:before {

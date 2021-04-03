@@ -6,6 +6,7 @@
   "home": "home",
   "works": "works",
   "skills": "skills",
+  "portfolio": "portfolio",
   "experience": "experience",
   "about me": "about me",
   "about": "about",
@@ -22,7 +23,7 @@
   "all": "all",
   "my skills": "my skills",
   "residence": "residence",
-  "download my cv": "download my cv",
+  "download my cv": "Download my cv",
   "fast delivery": "fast delivery",
   "app development": "app development",
   "my": "my",
@@ -33,5 +34,9 @@
   "fast delivery.description": "Fast application development with punctual delivery times",
   "app development.description" : "Development of mobile and desktop applications",
   "available": "available",
-  "degree": "degree"
+  "degree": "degree",
+  "check my works": "Check my works",
+  "Engineer Systems": "Engineer Systems",
+  "SAP Architecture": "SAP Architecture",
+  "UI/UX Design": "UI/UX Design"
 }
