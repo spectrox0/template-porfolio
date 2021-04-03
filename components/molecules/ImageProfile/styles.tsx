@@ -24,7 +24,7 @@ export const ContainerImageProfile = styled.div<Props>`
       position: relative;
       z-index: 1;
       transform: translate3d(0,0,0);
-      transition: opacity .5s ease-in-out;
+      transition: opacity .5s ease-in-out .4s;
       opacity: ${({load}) => +!load};
     }
   }

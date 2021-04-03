@@ -15,7 +15,7 @@ export const ContainerAbout = styled(motion.section)`
     width: 100%;
     height: auto;
     padding: calc(1% + .2rem);
-    padding-bottom: calc(${heightFooter} + 20%);
+    padding-bottom: calc(${heightFooter} + 1rem);
     margin: 0 auto;
   }
 

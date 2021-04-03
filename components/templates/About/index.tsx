@@ -58,7 +58,7 @@ const AboutTemplate: React.FC = () => {
                                        alignText={'left'}> Skills</Title>
                                 <div className={'row'}>
                                     {skills.map((item, i) => (
-                                        <DonutChartSkill color={colorCategory[item.category]} delay={i * 0.5}
+                                        <DonutChartSkill color={colorCategory[item.category]} delay={(i + 1) * 0.5}
                                                          key={item.key}
                                                          percentage={item.percentage}
                                                          className={'col-6 col-sm-4 col-md-3 my-2'} name={item.name}
