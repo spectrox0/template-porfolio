@@ -1,5 +1,12 @@
 import styled from "styled-components";
-import {animationSidebar, breakpoint, heightNavbar, paletteColorsDark, widthSidebar} from "@/styles/variables";
+import {
+    animationSidebar,
+    breakpoint,
+    heightFooter,
+    heightNavbar,
+    paletteColorsDark,
+    widthSidebar
+} from "@/styles/variables";
 import {motion} from "framer-motion";
 
 interface Props {
@@ -40,6 +47,7 @@ export const ContainerPortfolioTemplate = styled(motion.section)<Props>`
   .wrapper-portfolio {
     position: absolute;
     z-index: 1;
+    margin: 0 auto;
     width: 100%;
     bottom: 0;
     left: 0;
@@ -51,6 +59,7 @@ export const ContainerPortfolioTemplate = styled(motion.section)<Props>`
     .container {
       padding: 1rem;
       max-width: none;
+      padding-bottom: calc(${heightFooter} + 1rem);
     }
     @media screen and (max-width: ${breakpoint.md}) {
       padding-left: 0 !important;

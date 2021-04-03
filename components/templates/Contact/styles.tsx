@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {motion} from "framer-motion";
-import {heightNavbar} from "../../../styles/variables";
+import {heightFooter, heightNavbar} from "../../../styles/variables";
 
 
 export const ContainerContactTemplate = styled(motion.section)`
@@ -9,5 +9,7 @@ export const ContainerContactTemplate = styled(motion.section)`
   height: calc(100% - ${heightNavbar});
   left: 0;
   bottom: 0;
-  padding: calc(1% + .2rem);
+  .container {
+    padding-bottom: calc(${heightFooter} + 20%);
+  }
 `

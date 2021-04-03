@@ -15,7 +15,7 @@ export const ContainerModalWork = styled(motion.div)<Props>`
   height: calc(100% - 1rem);
   max-height: 60rem;
   z-index: 999;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
   border-radius: 10px;
 
   .row {
