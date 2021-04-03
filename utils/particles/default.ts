@@ -5,12 +5,7 @@ export const paramsTsParticles: IParticlesParams = {
     fpsLimit: 60,
     detectRetina: true,
     "particles": {
-        shadow: {
-            enable: true,
-            color: paletteColorsDark.primary,
-            blur: 10,
-            offset: {x: 4, y: 4}
-        },
+
         move: {
             direction: 'none',
             enable: true,

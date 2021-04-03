@@ -10,17 +10,17 @@ export const ContainerFooter = styled.footer`
   max-width: ${breakpoint.xl};
   width: 100%;
   flex:1;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   display: flex;
   transform: translateX(-50%);
   .select-locale {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     right: 0;
-    max-width: 20%;
+    max-width: 15%;
 
     .container-img {
       position: relative;

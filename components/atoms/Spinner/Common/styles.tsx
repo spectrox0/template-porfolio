@@ -17,7 +17,7 @@ export const ContainerSpinner = styled.div`
 
     border-top: 1px solid ${paletteColorsDark.primary};
     border-left: 1px solid ${paletteColorsDark.primary};
-    box-shadow: 0 0 20px ${paletteColorsDark.primary};
+    box-shadow: 0 0 0.5rem ${paletteColorsDark.primary};
     top: 50%;
     left: 50%;
     margin: -30px;
@@ -29,7 +29,7 @@ export const ContainerSpinner = styled.div`
     content: "";
     position: absolute;
     border-radius: 50%;
-    box-shadow: 0 0 20px ${paletteColorsDark.primary};
+    box-shadow: 0 0 .5rem ${paletteColorsDark.primary};
   }
 
   .spinner:before {
