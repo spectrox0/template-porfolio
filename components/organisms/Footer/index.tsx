@@ -20,7 +20,7 @@ export const Footer:React.FC<Props> = () => {
     return (
         <ContainerFooter>
             <BarContact/>
-            <div className={'select-locale'}>
+            <div className={'select-locale my-2'}>
                 {locales.map((item) => (
                     <div key={item.key} className={'container-img'}>
                         <img className={item.key === router.locale ? 'active' : ''} alt={item.key}

@@ -43,13 +43,13 @@ export const ContainerItemNavigation = styled.li<Props>`
     }
 
     &:after {
-      background-image: linear-gradient(to left, ${paletteColorsDark.primary}, ${paletteColorsDark.primaryColorTransparent(0)});
+      background-image: linear-gradient(to left,  ${paletteColorsDark.primaryColorTransparent(0)} , ${paletteColorsDark.primary}, ${paletteColorsDark.primaryColorTransparent(0)});
       bottom: -.5rem;
       right: 0;
     }
 
     &:before {
-      background-image: linear-gradient(to right, ${paletteColorsDark.primary}, ${paletteColorsDark.primaryColorTransparent(0)});
+      background-image: linear-gradient(to right,  ${paletteColorsDark.primaryColorTransparent(0)},  ${paletteColorsDark.primary}, ${paletteColorsDark.primaryColorTransparent(0)});
       top: -.5rem;
       left: 0;
     }

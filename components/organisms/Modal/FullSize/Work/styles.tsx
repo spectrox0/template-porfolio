@@ -10,13 +10,12 @@ export const ContainerModalWork = styled(motion.div)<Props>`
   overflow: hidden;
   top: 0;
   left: 0;
-  width: 100%;
+  width: calc(100% - 1rem);
   max-width: ${breakpoint.xl};
-  height: 100%;
+  height: calc(100% - 1rem);
   max-height: 60rem;
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
   z-index: 999;
-  background-color: ${paletteColorsDark.backgroundTransparent(0.8)};
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
   border-radius: 10px;
 
   .row {
@@ -61,7 +60,7 @@ export const ContainerModalWork = styled(motion.div)<Props>`
 export const ContainerBackdrop = styled(motion.div)`
     z-index: 998;
     background-color: ${paletteColorsDark.background};
-    opacity: 0.5;
+    opacity: 0.2;
     width: 100%;
     height: 100%;
     position:fixed;
