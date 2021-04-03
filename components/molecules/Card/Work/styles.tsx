@@ -8,7 +8,7 @@ export const ContainerCardWork = styled.div`
   height: 100%;
   position: relative;
   transition: opacity .3s ease-in-out;
-  opacity: 0.8;
+  opacity: 1;
   img {
     width: 100%;
     height: 100%;

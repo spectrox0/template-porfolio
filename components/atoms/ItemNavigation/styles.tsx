@@ -27,12 +27,10 @@ export const ContainerItemNavigation = styled.li<Props>`
   span {
     text-transform: uppercase;
     letter-spacing: 0.14em;
-    font-weight: 400;
+    font-weight: 500;
     font-size: .75em;
     position: relative;
-    background: linear-gradient(45deg, #fff, rgba(255, 255, 255, 0.5));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    color: #fff;
 
     &:after, &:before {
       content: "";
