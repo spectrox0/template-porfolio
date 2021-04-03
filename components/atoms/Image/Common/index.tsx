@@ -8,14 +8,16 @@ export interface Props {
     width?: string,
     height?: string,
     load?: boolean,
+    refImage?: any,
     setLoad?: (value: boolean) => void
 }
 
-export const Image: React.FC<Props> = ({alt = "", setLoad, ...rest}) => {
+export const Image: React.FC<Props> = ({alt = "", setLoad,refImage, ...rest}) => {
     return (
         <ContainerImage
             alt={alt}
             onLoad={() => setLoad && setLoad(true)}
+            ref={refImage}
             {...rest}
         />
     )

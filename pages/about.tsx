@@ -1,14 +1,16 @@
-import  * as React from "react";
-import dynamic from "next/dynamic";
-import {ScreenLoading} from "../components/molecules/ScreenLoading";
+import * as React from "react";
 
-const AboutTemplate  = dynamic(() => import('../components/templates/About'), {
-    ssr: false,
-    loading: () => <ScreenLoading loading/>
-})
-const About : React.FC  = () => {
+import AboutTemplate from "../components/templates/About"
+import Head from 'next/head';
+
+const About: React.FC = () => {
     return (
-        <AboutTemplate/>
+        <>
+            <Head>
+                <title>About me Viviana Tepedino</title>
+            </Head>
+            <AboutTemplate/>
+        </>
     )
 }
 export default About

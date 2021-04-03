@@ -5,23 +5,37 @@ import {Service} from "../models/Service";
 
 
 interface SocialNetworks {
-    linkedin: {name: string, value: string, href?: string}
-    github: {name: string, value: string, href?: string}
-    telegram: {name: string, value: string, href?: string}
-    email: {name: string, value: string, href?: string}
+    linkedin: { name: string, value: string, href?: string }
+    github: { name: string, value: string, href?: string }
+    telegram: { name: string, value: string, href?: string }
+    email: { name: string, value: string, href?: string }
 }
 
+enum EnumCategories {
+    sap,
+    web,
+    design,
+    certificates,
+}
+
+interface CategoriesWork {
+    name: string,
+    key: keyof typeof EnumCategories
+}
+
+export const firstName= 'Viviana'
+export const lastName = 'Tepedino'
+export const fullName = `${firstName} ${lastName}`
 export const imgProfile: string = require('images/profileImage.jpg?webp')
 export const imgProfileBlur: string = require('images/profileImage.jpg?lqip')
+export const backgroundImage: string = require("images/background_two.jpg?webp")
+export const emailFromContact: string = "alejandro.velazco@correo.unimet.edu.ve"
 
 export const descriptionAboutMe: MultiLang = {
     "es": "Hola soy Viviana",
     'en': "Hi i'm Viviana"
 }
-
 export const urlCV = ''
-
-
 export const socialNetwork: SocialNetworks = {
     linkedin: {
         name: "Linkedin",
@@ -42,7 +56,6 @@ export const socialNetwork: SocialNetworks = {
         value: "vivitepedino@gmail.com"
     }
 }
-
 export const infoBiography: { name: string, value: string | number } [] = [{
     name: "age",
     value: 24
@@ -70,7 +83,7 @@ export const skills: Skill [] = [
     },
     {
         category: 'design',
-        key:  EnumSkill.figma,
+        key: EnumSkill.figma,
         name: 'Figma',
         percentage: 80
     },
@@ -113,23 +126,6 @@ export const skills: Skill [] = [
 ].sort((a, b) => {
     if (a.category > b.category) return 1; else return -1
 })
-
-export const interest = []
-
-
-
-
-enum EnumCategories {
-    sap,
-    web,
-    design,
-    certificates,
-}
-
-interface CategoriesWork {
-    name: string,
-    key: keyof typeof EnumCategories
-}
 
 export const categoriesWork: CategoriesWork[] = [
     {

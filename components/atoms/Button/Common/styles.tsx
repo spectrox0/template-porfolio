@@ -7,13 +7,15 @@ export const ContainerButton = styled.div`
   display: flex;
   justify-content: center;
   margin: 1rem auto ;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0,0,0,0.3);
   max-width: 400px;
   border-radius: 10px;
-  transition: opacity 0.4 ease-in-out;
+  overflow: hidden;
+  transition: opacity 0.2s ease-in-out;
   button {
     font-family: ${primaryFontFamily};
     color:  rgba(255,255,255,0.6);
+    overflow: hidden;
     font-weight: 300;
     flex: 1;
     padding: .7rem .8rem;
@@ -26,6 +28,7 @@ export const ContainerButton = styled.div`
     align-items: center;
     justify-content: center;
     cursor: none;
+    border-radius: 10px;
     svg {
       margin: 0 .5rem;
     }

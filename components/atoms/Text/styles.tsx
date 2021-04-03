@@ -18,7 +18,7 @@ export const ContainerText = styled.p<Props>`
   font-weight: ${({fontWeight}) => fontWeight || 300};;
   font-size: ${({fontSize}) => fontSize || "1.1em"};;
   text-align: ${({alignText}) => alignText || 'left'};
-  background-image: linear-gradient(45deg, #fff, rgba(255, 255, 255, 0.5));
+  background-image: linear-gradient(45deg, ${({color}) => color || "#fff"}, rgba(255, 255, 255, 0.5));
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `

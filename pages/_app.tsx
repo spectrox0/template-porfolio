@@ -10,6 +10,9 @@ import {useRouter} from "next/router";
 import locales from '../locales'
 import {GlobalStyle} from '../styles/global'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import {Provider} from "react-redux";
+import {useStore} from '../redux/store'
+import {Alert} from "../components/organisms/Modal/Alert";
 const MyApp = ({Component, pageProps, router}: AppProps) => {
 
     const messages = {
@@ -17,15 +20,19 @@ const MyApp = ({Component, pageProps, router}: AppProps) => {
     }
     //const store = useStore(pageProps.initialReduxState)
     const {locale = 'en'} = useRouter()
+    const store = useStore(pageProps.initialReduxState)
     return (
-        <IntlProvider locale={locale} messages={messages[locale]}>
+        <IntlProvider locale={locale} messages={messages[locale].default}>
+            <Provider store={store}>
             <GlobalStyle/>
                 <Layout>
                     <AnimatePresence exitBeforeEnter>
                         <Component {...pageProps} key={router.route}/>
                     </AnimatePresence>
                     <LoadingRoute/>
+                    <Alert />
                 </Layout>
+           </Provider>
         </IntlProvider>)
 }
 export default MyApp;

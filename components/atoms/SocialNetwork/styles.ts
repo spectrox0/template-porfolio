@@ -3,10 +3,8 @@ import {paletteColorsDark} from "../../../styles/variables";
 
 
 export const ContainerSocialNetwork = styled.a`
-  backdrop-filter: blur(3px);
   border-radius: 50%;
   height: 2.5rem;
-  margin-bottom: 1rem;
   margin-right: .5rem;
   margin-left: .5rem;
   width: 2.5rem;

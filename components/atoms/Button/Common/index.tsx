@@ -4,6 +4,7 @@ import {onMouseLeave, onMouseOver} from '../../../../helpers/cursor'
 
 interface Props {
     color?: string
+    classNameButton?: string
 }
 
 export const Button: React.FC<Props
@@ -11,6 +12,7 @@ export const Button: React.FC<Props
     & React.HTMLProps<HTMLButtonElement>> = ({
                                                  color,
                                                  className,
+                                                 classNameButton,
                                                  children,
                                                  ...rest
                                              }) => {
@@ -18,7 +20,7 @@ export const Button: React.FC<Props
     return (
         <ContainerButton className={className} color={color}>
             {/*@ts-ignore*/}
-            <button onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} {...rest}>
+            <button className={classNameButton} onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} {...rest}>
                 {children}
             </button>
         </ContainerButton>

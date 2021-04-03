@@ -22,7 +22,7 @@ export const ContactTemplate = () => {
                         <div className={'d-flex flex-wrap justify-content-center align-items-center'}>
                             {Object.entries(socialNetwork).map(([item, value], key) => {
                                 return (
-                                    <ItemContact className={'my-2 mx-2'} icon={item} {...value}/>
+                                    <ItemContact key={key} className={'my-2 mx-2'} icon={item} {...value}/>
                                 )
                             })}
                         </div>

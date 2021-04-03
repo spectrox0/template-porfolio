@@ -10,6 +10,8 @@ import {useRouter} from "next/router";
 import {Button} from "../../atoms/Button/Common";
 import {AiOutlineArrowRight} from "react-icons/ai";
 import {Title} from "../../atoms/Title";
+import {firstName, lastName} from "../../../config";
+import {useIntl} from "react-intl";
 
 const locales = [
     {key: 'en', src: require('images/united-states.svg')},
@@ -17,11 +19,12 @@ const locales = [
 ]
 
 export const HomeTemplate: React.FC = () => {
+    const {formatMessage : t} = useIntl()
     useEffect(() => {
             init([
-                'Engineer Software',
-                'SAP Architecture',
-                'UI/UX Design',
+                 t({id:"Engineer Systems"}),
+                t({id:"SAP Architecture"}),
+                t({id:"UI/UX Design"}),
             ])
         }, []
     )
@@ -34,10 +37,10 @@ export const HomeTemplate: React.FC = () => {
         <ContainerHomeTemplate id={'container-home'} {...propsPage}>
             <BarContact/>
             <div className="container d-flex flex-column align-items-center">
-                <Title fontSize={'3em'} tagTitle={'h1'}> Viviana <strong> Tepedino </strong></Title>
+                <Title fontSize={'3em'} tagTitle={'h1'}> {firstName} <strong> {lastName} </strong></Title>
                 <h3 className='text'/>
-                <Button className={'pl-4 pr-3'}>
-                    Check my Works <AiOutlineArrowRight size={'1em'}/>
+                <Button classNameButton={'pl-4 pr-3'}>
+                    {t({id:"check my works"})} <AiOutlineArrowRight size={'1em'}/>
                 </Button>
             </div>
             <div className={'select-locale'}>

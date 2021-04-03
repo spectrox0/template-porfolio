@@ -1,34 +1,30 @@
-import { GET_DATA_FIREBASE, SUCCESS_GET_DATA_FIREBASE, FAILURE_GET_DATA_FIREBASE} from '../actionTypes'
-import { db } from '../../firebase.config'
-export const getDataFirebase = (payload = {}) => ({
-    type: GET_DATA_FIREBASE,
-    ...payload,
-})
+import {SUCCESS_GET_DATA_FIREBASE} from '../actionTypes'
+import {db} from '../../firebase.config'
+import {setAlert, setLoading} from "./global";
 
-export const failureGetDataFirebase = (payload ={}) => ({
-    type: FAILURE_GET_DATA_FIREBASE,
-    ...payload,
-})
 
 export const successGetDataFirebase = (payload: object = {}) => ({
     type: SUCCESS_GET_DATA_FIREBASE,
     ...payload,
 })
+
 interface ParamsFetchData {
     collectionName: string
 }
-export const fetchDataFirebase = ({collectionName} : ParamsFetchData) => {
+
+export const fetchDataFirebase = ({collectionName}: ParamsFetchData) => {
     return (dispatch: (action) => void) => {
-        dispatch(getDataFirebase())
+        dispatch(setLoading({loading: true}))
         try {
             db.collection(collectionName).onSnapshot(snapshots => {
                 const arr: any[] = []
-                snapshots.forEach(doc => arr.push({ ...doc.data(), id: doc.id }))
-                dispatch(successGetDataFirebase({ payload: { [collectionName]: arr } }))
+                snapshots.forEach(doc => arr.push({...doc.data(), id: doc.id}))
+                dispatch(successGetDataFirebase({payload: {[collectionName]: arr}}))
             })
+            dispatch(setLoading({loading: true}))
         } catch (error) {
-            console.log(error)
-            dispatch(failureGetDataFirebase({ payload: { error: 'Error '} }))
+            dispatch(setLoading({loading: false}))
+            dispatch(setAlert({message: "An Error ocurred when you try connect to database", type: "error"}))
         }
 
     }

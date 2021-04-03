@@ -2,10 +2,14 @@ import {useMemo} from 'react'
 import {AnyAction, applyMiddleware, createStore} from 'redux'
 import {composeWithDevTools} from 'redux-devtools-extension'
 import thunk from 'redux-thunk'
-import {FAILURE_GET_DATA_FIREBASE, GET_DATA_FIREBASE, SET_LOAD, SUCCESS_GET_DATA_FIREBASE} from '../actionTypes'
+import {FAILURE_GET_DATA_FIREBASE, GET_DATA_FIREBASE, SET_LOAD, SUCCESS_GET_DATA_FIREBASE, SET_ALERT} from '../actionTypes'
 import {WorkDesign} from '../../models/WorkDesign'
 import {Certificate} from "../../models/Certificate"
 
+interface Alert {
+    type: string
+    message: string
+}
 interface State {
     work?: WorkDesign,
     loading: boolean,
@@ -13,6 +17,7 @@ interface State {
     isOpen: false,
     worksDesign: WorkDesign[]
     certificates: Certificate[]
+    alert?: Alert | null
 }
 
 const initialState: State = {
@@ -20,7 +25,8 @@ const initialState: State = {
     errorWorks: false,
     isOpen: false,
     worksDesign: [],
-    certificates: []
+    certificates: [],
+    alert: undefined
 }
 
 
@@ -51,6 +57,13 @@ const reducer = (state: State & any = initialState, action: AnyAction) => {
             return {
                 ...state,
                 loading
+            }
+        }
+        case SET_ALERT: {
+            const {alert} = action.payload
+            return {
+                ...state,
+                alert
             }
         }
         default:
