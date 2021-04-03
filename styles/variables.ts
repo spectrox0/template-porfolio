@@ -12,6 +12,7 @@ export const paletteColorsDark = {
 
 export const widthSidebar = '18rem'
 export const heightNavbar = '3.75rem'
+export const heightFooter = '3.75rem';
 
 export const animationSidebar = '.2s ease-in-out';
 export enum Theme {

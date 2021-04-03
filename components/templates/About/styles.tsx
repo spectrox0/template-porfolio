@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {motion} from "framer-motion";
-import {breakpoint, heightNavbar} from "../../../styles/variables";
+import {breakpoint, heightFooter, heightNavbar} from "../../../styles/variables";
 
 export const ContainerAbout = styled(motion.section)`
   position: absolute;
@@ -15,7 +15,7 @@ export const ContainerAbout = styled(motion.section)`
     width: 100%;
     height: auto;
     padding: calc(1% + .2rem);
-
+    padding-bottom: calc(${heightFooter} + 20%);
     margin: 0 auto;
   }
 
