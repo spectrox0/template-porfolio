@@ -9,7 +9,7 @@ export const paramsTsParticles: IParticlesParams = {
             enable: true,
             color: paletteColorsDark.primary,
             blur: 10,
-            offset: {x: 1, y: 1}
+            offset: {x: 4, y: 4}
         },
         move: {
             direction: 'none',
@@ -23,9 +23,9 @@ export const paramsTsParticles: IParticlesParams = {
         "number": {
             density: {
                 enable: true,
-                value_area: 800
+                value_area: 700
             },
-            "value": 30
+            "value": 25
         },
         "size": {
             random: true,

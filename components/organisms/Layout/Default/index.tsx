@@ -7,6 +7,7 @@ import {Cursor, Props as PropsCursor} from "../../../atoms/Cursor";
 import {AiOutlineAppstore, AiOutlineContacts, AiOutlineHome} from "react-icons/ai";
 import {ImProfile} from "react-icons/im";
 import {useIntl} from "react-intl";
+import {Footer} from "../../Footer";
 
 interface Props {
 
@@ -34,6 +35,7 @@ export const Layout: React.FC<Props> = ({children}) => {
             <div className={'wrapper'}>
                 <Navbar routes={routesNavbar} isOpen={isOpenCollapse}/>
                 {children}
+                <Footer />
             </div>
             <Cursor/>
         </Main>

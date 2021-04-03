@@ -55,8 +55,8 @@ export default async (req: NextApiRequest, res: NextApiResponse) => {
             },
         })
         transporter.sendMail({
-                from: `"${name} 👻" ${email}`, // sender address
-                to: `${emailFromContact} , ${socialNetwork.email.value}`, // list of receivers
+                from: `"${name} 👾🎮🕹" ${email}`, // sender address
+                to: [emailFromContact , socialNetwork.email.value], // list of receivers
                 subject, // Subject line // plain text body
                 html: bodyEmail({name, subject, email, message})
                 // eslint-disable-next-line @typescript-eslint/ban-ts-comment

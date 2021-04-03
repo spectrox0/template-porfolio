@@ -7,7 +7,7 @@ interface Props {
 
 export const ContainerNavbar = styled.nav<Props>`
   width: 100%;  
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, .5), rgba(0, 0, 0, .5) 0, transparent);
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, .7), rgba(0, 0, 0, .5) 0, transparent);
   position: fixed;
   height: ${heightNavbar};
   z-index: 999;
@@ -16,7 +16,7 @@ export const ContainerNavbar = styled.nav<Props>`
   align-items: center;
   .navbar-inner {
     width: 100%;
-    max-width: ${breakpoint.lg};
+    max-width: ${breakpoint.xl};
     display: flex;
     align-items: center;
     justify-content: center;

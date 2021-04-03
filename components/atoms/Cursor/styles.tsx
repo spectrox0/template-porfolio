@@ -20,7 +20,9 @@ export const ContainerCursor = styled.div<Props>`
   border-radius: 50%;
   pointer-events: none;
   transform: translate3d(-50%, -50%, 0);
-
+  @media (hover: none) {
+   display: none;
+  }
   &:after {
     content: "";
     position: absolute;
