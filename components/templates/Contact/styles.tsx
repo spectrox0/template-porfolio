@@ -10,6 +10,11 @@ export const ContainerContactTemplate = styled(motion.section)`
   left: 0;
   bottom: 0;
   .container {
-    padding-bottom: calc(${heightFooter} + 20%);
+    margin: 0 auto;
+    flex: 1;
+    height: calc(100% - ${heightNavbar});
+    width: 100%;
+    padding: calc(1% + .2rem);
+    padding-bottom: calc(${heightFooter} + 1rem);
   }
 `
