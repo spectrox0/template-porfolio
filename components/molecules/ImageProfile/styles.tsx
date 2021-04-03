@@ -14,7 +14,6 @@ export const ContainerImageProfile = styled.div<Props>`
     border-radius: 50%;
     width: 100%;
     height: 100%;
-    opacity: 0.8;
     max-width: 100%;
 
     &:nth-child(1) {
