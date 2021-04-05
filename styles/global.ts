@@ -63,7 +63,7 @@ export const GlobalStyle = createGlobalStyle`
   *:before {
     box-sizing: border-box;
   }
-
+  
 
   div {
     -webkit-touch-callout: none;
