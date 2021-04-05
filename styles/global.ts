@@ -38,7 +38,25 @@ export const GlobalStyle = createGlobalStyle`
       font-size: .9rem;
     }
   }
-  
+  button,
+  select,
+  h1,
+  h2,
+  h3,
+  h4,
+  span,
+  p,
+  img,
+  a {
+    -webkit-touch-callout: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
 
   *,
   *:after,
@@ -46,23 +64,6 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box;
   }
 
-  button,
-  textarea,
-  input,
-  select,
-  h2,
-  div,
-  h1,
-  strong,
-  b,
-  h3,
-  h4,
-  span,
-  p,
-  img,
-  a {
-    
-  }
 
   div {
     -webkit-touch-callout: none;

@@ -12,11 +12,14 @@ interface Props {
     className: string
 }
 
-export const ItemContact: React.FC<Props> = ({icon, value, name, className}) => {
+export const ItemContact: React.FC<Props> = ({icon, value, name,href, className}) => {
     return (
         <ContainerItemContact onMouseOver={onMouseOver}
                               onMouseLeave={onMouseLeave}
-                              className={className}>
+                              className={className}
+                              target="_blank"
+                              href={href}
+         >
             <div className={'icon'}>
                 <Icon name={icon}/>
             </div>

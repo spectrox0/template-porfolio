@@ -9,7 +9,7 @@ export interface WorkDesign {
     id: number | string
     date: Timestamp,
     description?: MultiLang,
-    images?: Image[],
+    images: Image[],
     img: Image,
     skills?: EnumSkill[] | (keyof typeof EnumSkill)[],
     link?: string

@@ -1,8 +1,12 @@
 import styled from "styled-components";
 import {fontFamily,primaryFontFamily, paletteColorsDark} from "../../../../styles/variables";
 
-
-export const ContainerButton = styled.div`
+interface Props {
+    color?: string
+    classNameButton?: string
+    fontSize?:string,
+}
+export const ContainerButton = styled.div<Props>`
   position: relative;
   display: flex;
   justify-content: center;
@@ -19,7 +23,7 @@ export const ContainerButton = styled.div`
     font-weight: 300;
     flex: 1;
     padding: .7rem .8rem;
-    font-size: 1.3em;
+    font-size: ${({fontSize}) => fontSize || '1.3em'};
     height: 100%;
     background: none;
     border: none;

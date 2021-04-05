@@ -19,8 +19,7 @@ export const ContainerPortfolioTemplate = styled(motion.section)<Props>`
   .toggle {
     position: fixed;
     top: calc(${heightNavbar} + .3rem);
-
-    right 1.5rem;
+    right: 1.5rem;
     width: 2.5rem;
     opacity: 0.8;
     font-size: 1.5em;

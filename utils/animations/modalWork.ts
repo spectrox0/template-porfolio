@@ -1,27 +1,17 @@
-import {animationAlertBackdropVariant} from "./alert";
-
-interface Props {
-    coordinate: {
-        x: number
-        y: number
-    }
-    size: {
-        width: number
-        height: number
-    }
-}
-export const animationModalWorkVariant = (props : Props) =>({
+export const animationModalWorkVariant = {
     initial: {
+        top: "50%",
+        left: "50%",
+        translateX: "-50%",
+        translateY: "-50%",
         opacity: 0,
-        y: props.coordinate.y,
-        x: props.coordinate.x,
-        width: props.size.width,
-        height: props.size.height
+        originX: 0.5,
+        originY: 0.5,
+        scale: 0.2,
     },
     enter: {
         opacity: 1,
-        width: '100%',
-        height: '100%',
+        scale: 1,
         transition: {
             duration: 0.5,
             ease: [0.48, 0.15, 0.25, 0.96],
@@ -29,16 +19,19 @@ export const animationModalWorkVariant = (props : Props) =>({
     },
     exit: {
         opacity: 0,
+        scale: 0.2,
+        originX: 0.5,
+        originY: 0.5,
         transition: {
             duration: 0.4,
             ease: [0.48, 0.15, 0.25, 0.96],
         }
     },
-})
+}
 
-export const propsModalWorkAnimation = (props: Props) => ({
-    variants: animationModalWorkVariant(props),
-    animate:"enter",
-    initial:"initial",
-    exit:"exit"
-})
+export const propsModalWorkAnimation = {
+    variants: animationModalWorkVariant,
+    animate: "enter",
+    initial: "initial",
+    exit: "exit"
+}

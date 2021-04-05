@@ -3,35 +3,15 @@ import {ContainerBarContact} from "./styles";
 import {Props as PropsSocialNetwork, SocialNetwork} from "@/components/atoms/SocialNetwork"
 import {AiOutlineGithub, AiOutlineLinkedin} from 'react-icons/ai'
 import {FaTelegram} from "react-icons/fa";
+import {socialNetwork} from "../../../config";
+import {Icon} from "../../atoms/Icon";
 
-interface Props {
-    socialNetWorks?: PropsSocialNetwork[]
-}
-
-const socialNetworksDefault: PropsSocialNetwork[] = [
-    {
-        name: 'github',
-        url: 'http://github.com',
-        icon: (props) => <AiOutlineGithub {...props} />
-    },
-    {
-        name: 'linkedin',
-        url: 'http://linkedin.com',
-        icon: (props) => <AiOutlineLinkedin {...props} />
-    },
-    {
-        name: 'telegram',
-        url: 'http://linkedin.com',
-        icon: (props) => <FaTelegram {...props} />
-    }
-]
-
-export const BarContact: React.FC<Props> = ({socialNetWorks = socialNetworksDefault}) => {
+export const BarContact: React.FC<{}> = () => {
 
     return (
         <ContainerBarContact>
-            {socialNetWorks.map((item, key) => (
-                <SocialNetwork key={key} icon={item.icon} url={item.url} name={item.name}/>
+            {Object.entries(socialNetwork).splice(0,3).map(([key,value]) => (
+                <SocialNetwork key={key} icon={() => <Icon name={key} />} url={value.href} name={value.name}/>
             ))}
         </ContainerBarContact>
     )

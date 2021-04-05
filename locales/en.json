@@ -11,6 +11,8 @@
   "about me": "about me",
   "about": "about",
   "me": "me",
+  "freelance": "freelance",
+  "email": "email",
   "contact me": "contact me",
   "contact": "contact",
   "services": "services",
@@ -38,5 +40,8 @@
   "check my works": "Check my works",
   "Engineer Systems": "Engineer Systems",
   "SAP Architecture": "SAP Architecture",
-  "UI/UX Design": "UI/UX Design"
+  "UI/UX Design": "UI/UX Design",
+  "See project" : "See project",
+  "Back" : "Back",
+  "certificates": "certificates"
 }
