@@ -36,15 +36,16 @@ export const animationAlertBackdropVariant = {
         opacity: 0,
     },
     enter: {
-        opacity: 0.5,
+        opacity: 0.8,
         transition: {
-            duration: 0.5,
+            duration: 0.4,
             ease: [0.48, 0.15, 0.25, 0.96],
         },
     },
     exit: {
         opacity: 0,
         transition: {
+            delay: 0.3,
             duration: 0.4,
             ease: [0.48, 0.15, 0.25, 0.96],
         }

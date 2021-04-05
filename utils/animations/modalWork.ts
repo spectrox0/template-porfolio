@@ -4,22 +4,23 @@ export const animationModalWorkVariant = {
         left: "50%",
         translateX: "-50%",
         translateY: "-50%",
+        x:'10%',
         opacity: 0,
         originX: 0.5,
         originY: 0.5,
-        scale: 0.2,
     },
     enter: {
         opacity: 1,
-        scale: 1,
+        x:0,
         transition: {
             duration: 0.5,
+            delay: 0.5,
             ease: [0.48, 0.15, 0.25, 0.96],
         },
     },
     exit: {
+        x:'-10%',
         opacity: 0,
-        scale: 0.2,
         originX: 0.5,
         originY: 0.5,
         transition: {
