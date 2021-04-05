@@ -4,7 +4,7 @@ import {onMouseLeave, onMouseOver} from '../../../../helpers/cursor'
 import {WorkDesign} from "../../../../models/WorkDesign";
 
 interface Props {
-    onClick?: (work: WorkDesign, coordinate: { x: number, y: number }) => void
+    onClick: (work: WorkDesign) => void
 }
 
 export const CardWork: React.FC<Props & WorkDesign> = ({
@@ -18,14 +18,11 @@ export const CardWork: React.FC<Props & WorkDesign> = ({
                                                            id,
                                                            onClick
                                                        }) => {
-    const selectWork = (e) => {
-            const x = e.pageX
-            const y =  e.pageY
-            if (onClick) {
-                onClick({img, name, id, skills, link, images, description, date}, {x, y} )
-            }
+    const selectWork = React.useCallback(() => {
+            onClick({img, name, id, skills, link, images, description, date})
+        }
+        , [img, name, id, skills, link, images, description, date])
 
-    }
     return (
         <ContainerCardWork onClick={selectWork} onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>
             <img src={img.src} alt={name}/>

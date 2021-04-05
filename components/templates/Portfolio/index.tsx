@@ -94,7 +94,7 @@ export const PortfolioTemplate: React.FC = () => {
                     <div className={'toggle'} onClick={() => setOpenSidebar(prevState => !prevState)}>
                         {!isOpenSidebar ? <AiOutlineFullscreenExit/> : <AiOutlineFullscreen/>}
                     </div>
-                    <Sidebar title={'Works'} items={categoriesWork} isOpen={isOpenSidebar}/>
+                    <Sidebar title={'Works'} items={[{  key: 'all', name: "All",},...categoriesWork]} isOpen={isOpenSidebar}/>
                     <div className={'wrapper-portfolio'}>
                         <GridWork works={works} onClick={changeWork}/>
                     </div>

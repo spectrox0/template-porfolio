@@ -11,7 +11,7 @@ export const ContainerSocialNetwork = styled.a`
   justify-content: center;
   cursor: pointer;
   position: relative;
-
+  color: #fff;
   &:after, &:before {
     content: "";
     position: absolute;
@@ -41,7 +41,8 @@ export const ContainerSocialNetwork = styled.a`
   }
 
   &:hover {
-
+    text-decoration: none;
+    color: #fff;
     &:after, &:before {
       transform: translate(-50%, -50%) scale(1);
     }

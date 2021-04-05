@@ -5,8 +5,8 @@ import {BarContact} from "../../molecules/BarContact";
 
 
 const locales = [
-    {key: 'en', src: require('images/united-states.svg')},
-    {key: 'es', src: require('images/spain.svg')},
+    {key: 'en', src: require('images/united-states.svg').default},
+    {key: 'es', src: require('images/spain.svg').default},
 ]
 interface Props {
 

@@ -2,10 +2,12 @@ import styled from "styled-components";
 import {paletteColorsDark} from "../../../styles/variables";
 
 
-export const ContainerItemContact = styled.div`
+export const ContainerItemContact = styled.a`
   max-width: 15rem;
   flex: 1;
-
+  &:hover {
+    text-decoration: none;
+  }
   .icon {
     flex: 1;
     display: flex;

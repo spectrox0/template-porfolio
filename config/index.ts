@@ -7,7 +7,6 @@ import {Service} from "../models/Service";
 interface SocialNetworks {
     linkedin: { name: string, value: string, href?: string }
     github: { name: string, value: string, href?: string }
-    telegram: { name: string, value: string, href?: string }
     email: { name: string, value: string, href?: string }
 }
 
@@ -35,24 +34,21 @@ export const descriptionAboutMe: MultiLang = {
     "es": "Hola soy Viviana",
     'en': "Hi i'm Viviana"
 }
-export const urlCV = ''
+export const urlCV = '/'
 export const socialNetwork: SocialNetworks = {
     linkedin: {
         name: "Linkedin",
-        value: "vivitepedino@gmail.com",
-        href: "/"
+        value: "",
+        href: "https://www.linkedin.com/in/viviana-tepedino-9469471b8/"
     },
     github: {
         name: "Github",
-        value: "vivitepedino@gmail.com",
-        href: "/"
-    },
-    telegram: {
-        name: "Telegram",
-        value: "@viviana"
+        value: "VivianaTC",
+        href: "https://github.com/VivianaTC/"
     },
     email: {
         name: "Email",
+        href:"mailto: vivitepedino@gmail.com",
         value: "vivitepedino@gmail.com"
     }
 }

@@ -6,9 +6,11 @@
   "home": "inicio",
   "works": "trabajos",
   "skills": "habilidades",
+  "freelance": "freelance",
+  "email": "email",
   "experience": "experiencia",
   "about me": "yo",
-  "about": "acerca de",
+  "about": "acerca de mi",
   "me": "mi",
   "contact me": "contactame",
   "contact": "contacto",
@@ -38,5 +40,8 @@
   "check my works": "Mira mis trabajos",
   "Engineer Systems": "Ingeniera de Sistemas",
   "SAP Architecture": "Arquitecto de soluciones SAP",
-  "UI/UX Design": "Diseño UI/UX"
+  "UI/UX Design": "Diseño UI/UX",
+  "See project" : "Ver projecto",
+  "Back" : "Volver",
+  "certificates": "certificados"
 }

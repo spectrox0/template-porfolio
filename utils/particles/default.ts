@@ -17,10 +17,10 @@ export const paramsTsParticles: IParticlesParams = {
         },
         "number": {
             density: {
-                enable: true,
-                value_area: 700
+                enable: false,
+                value_area: 200
             },
-            "value": 25
+            "value": 40
         },
         "size": {
             random: true,
@@ -44,16 +44,9 @@ export const paramsTsParticles: IParticlesParams = {
             enable: false,
             opacity: 0.5,
             width: 1,
-            "shadow": {
-                "blur": 5,
-                "color": {
-                    "value": "#000000"
-                },
-                "enable": true
-            },
         },
         collisions: {
-            enable: true
+            enable: false
         },
     },
     "interactivity": {
@@ -66,12 +59,6 @@ export const paramsTsParticles: IParticlesParams = {
             resize: true
         },
         modes: {
-            bubble: {
-                distance: 400,
-                duration: 2,
-                opacity: 0.8,
-                size: 40,
-            },
             repulse: {
                 distance: 100,
                 duration: 0.2

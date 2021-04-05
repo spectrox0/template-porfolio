@@ -2,7 +2,7 @@ import * as React from "react";
 import {ContainerAbout} from "./styles";
 import {propsPage} from "../../../utils/animations/transitionPage";
 import {
-    colorCategory,
+    colorCategory, descriptionAboutMe,
     firstName,
     imgProfile,
     imgProfileBlur,
@@ -21,9 +21,11 @@ import {DonutChartSkill} from "../../molecules/DonutChartSkill";
 import {Box} from "../../atoms/Box";
 import {Button} from "../../atoms/Button/Common";
 import {useIntl} from "react-intl";
+import {useRouter} from "next/router";
 
 const AboutTemplate: React.FC = () => {
     const {formatMessage: t} = useIntl()
+    const {locale = 'en'} = useRouter()
     return (
         <PerfectScrollbar>
             <ContainerAbout {...propsPage}>
@@ -42,20 +44,19 @@ const AboutTemplate: React.FC = () => {
                             <Box>
                                 <Title className={'my-2'} tagTitle={'h2'} fontSize={'1.7em'} fontWeight={'600'}
                                        alignText={'left'}> Hi i'm {firstName}</Title>
-                                <Text fontSize={'1.5em'}> Me encanta el reggaeton duro, adicta al buen naruto y al
-                                    sharingan </Text>
+                                <Text fontSize={'1.5em'}> {descriptionAboutMe[locale]} </Text>
                                 <div className={'row'}>
                                     {infoBiography.map((item, i) => (
                                         <div key={i}
                                              className={'col-sm-6 my-2 d-flex align-items-center info-biography'}>
                                             <Text fontWeight={'500'}
-                                                  className={'text-capitalize mr-3'}>{item.name} </Text>
+                                                  className={'text-capitalize mr-3'}> {t({id: item.name})} </Text>
                                             <Text className={'text-capitalize'}> {item.value}</Text>
                                         </div>
                                     ))}
                                 </div>
-                                <Title className={'mt-3 mb-2'} tagTitle={'h2'} fontSize={'1.7em'} fontWeight={'600'}
-                                       alignText={'left'}> Skills</Title>
+                                <Title className={'mt-3 mb-2 text-capitalize'} tagTitle={'h2'} fontSize={'1.7em'} fontWeight={'600'}
+                                       alignText={'left'}> {t({id: 'skills'})}</Title>
                                 <div className={'row'}>
                                     {skills.map((item, i) => (
                                         <DonutChartSkill color={colorCategory[item.category]} delay={(i + 1) * 0.5}
@@ -69,8 +70,8 @@ const AboutTemplate: React.FC = () => {
                         </div>
                         <div className={'col-md-3 my-2'}>
                             <Box>
-                                <Title className={'my-2'} tagTitle={'h2'} fontSize={'1.7em'}
-                                       fontWeight={'600'}> Services </Title>
+                                <Title className={'my-2 text-capitalize'} tagTitle={'h2'} fontSize={'1.7em'}
+                                       fontWeight={'600'}> {t({id: 'services'})} </Title>
                                 <div className={'row justify-content-center align-items-center'}>
                                     {Services.map((item, key) => {
                                         return (

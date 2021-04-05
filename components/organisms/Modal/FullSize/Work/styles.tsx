@@ -1,41 +1,25 @@
 import styled from "styled-components";
 import {Props} from "./index";
-import {breakpoint, paletteColorsDark} from "../../../../../styles/variables";
+import {breakpoint, heightNavbar, paletteColorsDark} from "../../../../../styles/variables";
 import {motion} from "framer-motion";
 
 
 export const ContainerModalWork = styled(motion.div)<Props>`
-
   position: fixed;
-  overflow: hidden;
   top: 0;
   left: 0;
-  width: calc(100% - 1rem);
-  max-width: ${breakpoint.xl};
-  height: calc(100% - 1rem);
-  max-height: 60rem;
-  z-index: 999;
-  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.3));
-  border-radius: 10px;
-
+  z-index: 11;
+  overflow: hidden;
+  max-width: ${breakpoint.lg};
+  max-height: 100vh;
+  width:100%;
+  .modal-inner {
+    max-height: 100vh;
+  }
   .row {
     margin: 0;
   }
-
-  .container-work {
-    position: absolute;
-    z-index: 2;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: calc(.4rem + 2%);
-  }
+  
 
   .img-background {
     position: absolute;
@@ -48,6 +32,13 @@ export const ContainerModalWork = styled(motion.div)<Props>`
     object-fit: cover;
     opacity: 0.7;
   }
+  .carousel-inner {
+    overflow: hidden;
+    &,img {
+      border-radius: 10px;
+    }
+    
+  }
 
   .options-image {
     position: absolute;
@@ -58,12 +49,12 @@ export const ContainerModalWork = styled(motion.div)<Props>`
 `
 
 export const ContainerBackdrop = styled(motion.div)`
-    z-index: 998;
-    background-color: ${paletteColorsDark.background};
-    opacity: 0.2;
-    width: 100%;
-    height: 100%;
-    position:fixed;
-    top: 0;
-    left: 0;
+  z-index: 10;
+  background-color: ${paletteColorsDark.background};
+  opacity: 0.5;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
   `

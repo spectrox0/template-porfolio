@@ -5,18 +5,18 @@ import {AnimatePresence} from "framer-motion";
 import {Button} from "../../../../atoms/Button/Common";
 import {Text} from "../../../../atoms/Text";
 import {Title} from "../../../../atoms/Title";
-import {AiOutlineLink} from "react-icons/all";
+import {AiFillBackward, AiFillStepBackward, AiOutlineLink, CgClose} from "react-icons/all";
 import {Skill} from "../../../../atoms/Skill";
 import PerfectScrollbar from "react-perfect-scrollbar";
 import {useRouter} from "next/router";
 import {CarouselWork} from "../../../Carousel/Work";
+import {Box} from "../../../../atoms/Box";
+import {propsModalWorkAnimation} from "../../../../../utils/animations/modalWork";
 import {propsAlertBackdropAnimation} from "../../../../../utils/animations/alert";
+import {useIntl} from "react-intl";
+
 
 export interface Props {
-    coordinate?: {
-        x: number,
-        y: number
-    }
     work?: WorkDesign,
     close?: () => void
 }
@@ -27,74 +27,30 @@ const options = {
     month: 'long',
     day: 'numeric',
 }
-export const ModalWork: React.FC<Props> = (props) => {
-    const {locale} = useRouter()
+export const ModalWork: React.FC<Props> = React.memo(function Component(props) {
+    const {locale = "en"} = useRouter()
+    const {formatMessage : t} = useIntl()
     return (
-        <PerfectScrollbar>
-            <AnimatePresence> {
-                props.work && props.coordinate && (
-                    <>
-                        <ContainerBackdrop onClick={props.close}/>
-                        <ContainerModalWork
-                            variants={{
-                                initial: {
-                                    top: "50%",
-                                    left: "50%",
-                                    translateX: "-50%",
-                                    translateY: "-50%",
-                                    opacity: 0,
-                                    originX: props.coordinate.x + "px",
-                                    originY: props.coordinate.y + "px",
-                                    scale: 0.2,
-                                },
-                                enter: {
-                                    opacity: 1,
-                                    scale: 1,
-                                    transition: {
-                                        duration: 0.5,
-                                        ease: [0.48, 0.15, 0.25, 0.96],
-                                    },
-                                },
-                                exit: {
-                                    opacity: 0,
-                                    scale: 0.2,
-                                    originX: props.coordinate.x + "px",
-                                    originY: props.coordinate.y + "px",
-                                    transition: {
-                                        duration: 0.4,
-                                        ease: [0.48, 0.15, 0.25, 0.96],
-                                    }
-                                },
-                            }}
-                            animate="enter"
-                            initial="initial"
-                            exit="exit">
-                            <div className={'row w-100 h-100 flex-sm-row-reverse'}>
+        <AnimatePresence> {
+            props.work && (
+                <>
+                    <ContainerBackdrop onClick={props.close} {...propsAlertBackdropAnimation}/>
+                    <ContainerModalWork {...propsModalWorkAnimation}>
+                        <PerfectScrollbar>
+                            <div className={'modal-inner'}>
+                                <div className={'row w-100 h-100'}>
+                                    <div className={'col-md-7 d-flex flex-column'}>
 
-                                <div className={'col-md-5'}>
-                                    {props.work.images.length < 1 ?
-                                        <img className={'image-background'} src={props.work.img.src} alt={''}/> :
-                                        <CarouselWork images={props.work.images}/>}
-                                    <div className={'d-flex flex-wrap w-100 options-image px-2'}>
-                                        <Button className={'flex-grow-1 mx-2'}> See Project <AiOutlineLink/> </Button>
-                                        <Button className={'flex-grow-1 mx-2'} onClick={props.close}>
-                                            Back
-                                        </Button></div>
-
-                                </div>
-                                <div className={'col-md-7'}>
-                                    <div
-                                        className={'container-work'}
-                                    >
-                                        <div className={'row w-100 h-100'}>
-                                            <div className={'col-md-8'}>
-                                                <Title tagTitle={'h3'} fontSize={'2em'} fontWeight={'500'}
-                                                       className={'my-2'}>
-                                                    {props.work.name}
-                                                </Title>
+                                        <Box className={'flex-grow-1 my-2 d-flex flex-column'}>
+                                            <Title tagTitle={'h3'} fontSize={'2em'} fontWeight={'500'}
+                                                   className={'my-2 flex-grow-0'}>
+                                                {props.work.name}
+                                            </Title>
+                                            <div className={'flex-grow-1'}>
                                                 <Text className={'my-2'}>
                                                     {new Date(props.work.date.seconds * 1000).toLocaleString(
                                                         `${locale}-VE`,
+                                                        //@ts-ignore
                                                         options
                                                     )}
                                                 </Text>
@@ -103,25 +59,45 @@ export const ModalWork: React.FC<Props> = (props) => {
 
                                                 </Text>
                                             </div>
-                                            <div className={'col-md-4'}>
-                                                <Title className={'my-3'} fontSize={'1.1em'} fontWeight={'500'}
-                                                       tagTitle={'h4'}>
-                                                    Related Skills
-                                                </Title>
-                                                <div className={'d-flex flex-wrap w-100'}>
-                                                    {props.work.skills && props.work.skills.map((item, key) => (
-                                                        <Skill className={'my-2 mx-1'} key={key + item} item={item}/>
-                                                    ))}
-                                                </div>
+                                            <div className={'d-flex flex-wrap w-100 px-2'}>
+                                                <Button fontSize={'1.2em'} className={'flex-grow-1 mx-2'}
+                                                        classNameButton={'px-2 py-2'}> <AiOutlineLink/>
+                                                        {t({id: 'See project'})}
+                                                </Button>
+                                                <Button className={'flex-grow-1 mx-2'} fontSize={'1.2em'}
+                                                        classNameButton={'px-2 py-2'}
+                                                        onClick={props.close}>
+                                                    ⇐ {t({id: 'Back'})}
+                                                </Button></div>
+                                        </Box>
+                                        <Box className={'my-2'}>
+                                            <Title className={'my-3'} fontSize={'1.1em'} fontWeight={'500'}
+                                                   tagTitle={'h4'}>
+                                                Related Skills
+                                            </Title>
+                                            <div className={'d-flex flex-wrap w-100'}>
+                                                {props.work.skills && props.work.skills.map((item, key) => (
+                                                    <Skill className={'my-2 mx-1'} key={key + item}
+                                                           item={item}/>
+                                                ))}
                                             </div>
-                                        </div>
+                                        </Box>
+                                    </div>
+                                    <div className={'col-md-5 d-flex flex-column'}>
+                                        <Box className={'flex-grow-1 my-2 overflow-hidden box-carousel'}>
+                                            {props.work.images.length < 1 ?
+                                                <img className={'image-background'} src={props.work.img.src}
+                                                     alt={''}/> :
+                                                <CarouselWork images={props.work.images}/>}
+                                        </Box>
+
                                     </div>
                                 </div>
                             </div>
-                        </ContainerModalWork>
-                    </>)}
+                        </PerfectScrollbar>
+                    </ContainerModalWork>
+                </>)}
 
-            </AnimatePresence>
-        </PerfectScrollbar>
+        </AnimatePresence>
     )
-}
+})
