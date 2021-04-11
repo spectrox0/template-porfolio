@@ -14,7 +14,6 @@ export const animationModalWorkVariant = {
         x:0,
         transition: {
             duration: 0.5,
-            delay: 0.5,
             ease: [0.48, 0.15, 0.25, 0.96],
         },
     },
@@ -24,7 +23,7 @@ export const animationModalWorkVariant = {
         originX: 0.5,
         originY: 0.5,
         transition: {
-            duration: 0.4,
+            duration: 0.5,
             ease: [0.48, 0.15, 0.25, 0.96],
         }
     },

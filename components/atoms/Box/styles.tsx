@@ -9,6 +9,7 @@ export const ContainerBox = styled.div`
   overflow: hidden;
   width:100%;
   box-shadow: 0 0 8px rgba(0,0,0,0.5);
+  position: relative;
   &.box-carousel {
     min-height: calc(15vw + 20rem);
     max-height: 40rem;
