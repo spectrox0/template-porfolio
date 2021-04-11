@@ -33,7 +33,7 @@ export const PortfolioTemplate: React.FC<Props> = ({works}) => {
                     <div className={'toggle'} onClick={() => setOpenSidebar(prevState => !prevState)}>
                         {!isOpenSidebar ? <AiOutlineFullscreenExit/> : <AiOutlineFullscreen/>}
                     </div>
-                    <Sidebar title={'Works'}
+                    <Sidebar title={'works'}
                              category={currentCategory}
                              setCategory={setCategory}
                              items={[{key: 'all', name: "All",}, ...categoriesWork]}

@@ -12,8 +12,10 @@ import {CarouselWork} from "../../../Carousel/Work";
 import {Box} from "../../../../atoms/Box";
 import {propsModalWorkAnimation} from "../../../../../utils/animations/modalWork";
 import {useIntl} from "react-intl";
-import {CloudinaryImage} from "../../../../atoms/Image/Cloudinary";
+import dynamic from "next/dynamic";
 
+// @ts-ignore
+const CloudinaryImage = dynamic(() => import("../../../../atoms/Image/Cloudinary").then(mod => mod.CloudinaryImage), {ssr: false})
 
 export interface Props {
     work?: WorkDesign,
@@ -80,11 +82,11 @@ export const ModalWork: React.FC<Props> = React.memo(function Component(props) {
                             </div>
                             <div className={'col-md-5 d-flex flex-column'}>
                                 <Box className={'flex-grow-1 my-2 overflow-hidden box-carousel'}>
-                                    {props.work.images.length < 1 ?
+                                    {props.work.images.length ?
                                         <CloudinaryImage
                                             className="img-background"
                                             alt="" image={props.work.image}/> :
-                                        <CarouselWork images={[props.work.image, ...props.work.images]}/>}
+                                        <CarouselWork images={[props.work.image,...props.work.images]}/>}
                                 </Box>
 
                             </div>

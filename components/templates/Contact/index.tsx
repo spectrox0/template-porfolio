@@ -7,17 +7,25 @@ import {ContactForm} from "../../organisms/Form/Contact";
 import {propsPage} from "../../../utils/animations/transitionPage";
 import {socialNetwork} from "../../../config";
 import {ItemContact} from "../../molecules/ItemContact";
+import {useRouter} from "next/router";
 
 export const ContactTemplate = () => {
-
+    const {locale} = useRouter()
     return (
         <PerfectScrollbar>
             <ContainerContactTemplate {...propsPage}>
                 <div className={'container my-2'}>
                     <Box>
                         <Title tagTitle={'h1'}>
-                            Contact
-                            <b> me </b>
+                            {locale === 'es' ? <>
+                                    Contactame
+                                </> :
+                                <>
+                                    Contact
+                                    <b> me </b>
+                                </>
+                            }
+
                         </Title>
                         <div className={'d-flex flex-wrap justify-content-center align-items-center'}>
                             {Object.entries(socialNetwork).map(([item, value], key) => {

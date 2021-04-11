@@ -17,7 +17,7 @@
   "contact": "contact",
   "services": "services",
   "my works": "my works",
-  "hi i'm": "hi i'm",
+  "Hi i'm": "Hi i'm",
   "subject": "subject",
   "message": "message",
   "name": "name",
@@ -36,6 +36,8 @@
   "fast delivery.description": "Fast application development with punctual delivery times",
   "app development.description" : "Development of mobile and desktop applications",
   "available": "available",
+  "years": "years",
+  "3 years": "3 years",
   "degree": "degree",
   "check my works": "Check my works",
   "Engineer Systems": "Engineer Systems",
@@ -43,5 +45,11 @@
   "UI/UX Design": "UI/UX Design",
   "See project" : "See project",
   "Back" : "Back",
-  "certificates": "certificates"
+  "About me": "About me",
+  "Portfolio": "Portfolio",
+  "Contact": "Contact",
+  "certificates": "certificates",
+  "All": "All",
+  "Certificates": "Certificates",
+  "Web Development": "Web Development"
 }

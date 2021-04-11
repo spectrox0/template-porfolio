@@ -4,6 +4,9 @@ import {ScreenLoading} from "../../components/molecules/ScreenLoading";
 import axios from "axios";
 import {endpointGetWork} from "../../utils/endpoints";
 import {WorkDesign} from "../../models/WorkDesign";
+import Head from "next/head";
+import {useRouter} from "next/router";
+import {useIntl} from "react-intl";
 // @ts-ignore
 const DynamicComponent = dynamic(() => import('../../components/templates/Portfolio').then(mod => mod.PortfolioTemplate), {
     ssr: false,
@@ -15,9 +18,14 @@ interface Props {
 }
 
 const Portfolio: React.FC<Props> = ({works = []}) => {
-
+    const {formatMessage: t} = useIntl()
     return (
-        <DynamicComponent works={works}/>
+        <>
+            <Head>
+                <title>Viviana Tepedino - {t({id:"Portfolio"})} </title>
+            </Head>
+            <DynamicComponent works={works}/>
+        </>
     )
 }
 

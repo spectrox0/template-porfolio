@@ -22,7 +22,7 @@ interface CategoriesWork {
     key: keyof typeof EnumCategories
 }
 
-export const firstName= 'Viviana'
+export const firstName = 'Viviana'
 export const lastName = 'Tepedino'
 export const fullName = `${firstName} ${lastName}`
 export const imgProfile: string = require('images/profileImage.jpg?webp')
@@ -48,7 +48,7 @@ export const socialNetwork: SocialNetworks = {
     },
     email: {
         name: "Email",
-        href:"mailto: vivitepedino@gmail.com",
+        href: "mailto: vivitepedino@gmail.com",
         value: "vivitepedino@gmail.com"
     }
 }

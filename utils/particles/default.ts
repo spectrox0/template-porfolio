@@ -20,7 +20,7 @@ export const paramsTsParticles: IParticlesParams = {
                 enable: false,
                 value_area: 200
             },
-            "value": 40
+            "value": 20
         },
         "size": {
             random: true,

@@ -43,7 +43,7 @@ const AboutTemplate: React.FC = () => {
                         <div className={'col-md-9 my-2'}>
                             <Box>
                                 <Title className={'my-2'} tagTitle={'h2'} fontSize={'1.7em'} fontWeight={'600'}
-                                       alignText={'left'}> Hi i'm {firstName}</Title>
+                                       alignText={'left'}> {t({id:"Hi i'm"})} {firstName}</Title>
                                 <Text fontSize={'1.5em'}> {descriptionAboutMe[locale]} </Text>
                                 <div className={'row'}>
                                     {infoBiography.map((item, i) => (
@@ -51,7 +51,7 @@ const AboutTemplate: React.FC = () => {
                                              className={'col-sm-6 my-2 d-flex align-items-center info-biography'}>
                                             <Text fontWeight={'500'}
                                                   className={'text-capitalize mr-3'}> {t({id: item.name})} </Text>
-                                            <Text className={'text-capitalize'}> {item.value}</Text>
+                                            <Text className={'text-capitalize'}> {t({id:item.value})}</Text>
                                         </div>
                                     ))}
                                 </div>
