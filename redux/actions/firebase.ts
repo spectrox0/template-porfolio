@@ -3,9 +3,9 @@ import {db} from '../../firebase.config'
 import {setAlert, setLoading} from "./global";
 
 
-export const successGetDataFirebase = (payload: object = {}) => ({
+export const successGetData = (payload: object = {}) => ({
     type: SUCCESS_GET_DATA_FIREBASE,
-    ...payload,
+    payload,
 })
 
 interface ParamsFetchData {
@@ -19,7 +19,7 @@ export const fetchDataFirebase = ({collectionName}: ParamsFetchData) => {
             db.collection(collectionName).onSnapshot(snapshots => {
                 const arr: any[] = []
                 snapshots.forEach(doc => arr.push({...doc.data(), id: doc.id}))
-                dispatch(successGetDataFirebase({payload: {[collectionName]: arr}}))
+                dispatch(successGetData({payload: {[collectionName]: arr}}))
             })
             dispatch(setLoading({loading: true}))
         } catch (error) {

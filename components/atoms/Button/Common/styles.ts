@@ -53,7 +53,7 @@ export const ContainerButton = styled.div`
     width: calc(100% - .4rem);
     height: calc(100% - .4rem);
   }
-   &:hover {
+   &:hover,&.active {
       opacity: 0.6;
       button {
         color: ${ ({color}) => color || paletteColorsDark.primary};

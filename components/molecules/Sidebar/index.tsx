@@ -8,6 +8,8 @@ interface Props {
     isOpen?: boolean,
     items?: Item[],
     title: string
+    setCategory: (key:string) => void,
+    category: string
 }
 
 export interface Item {
@@ -15,7 +17,7 @@ export interface Item {
     key: string
 }
 
-export const Sidebar: React.FC<Props> = ({isOpen = false, items = [], title}) => {
+export const Sidebar: React.FC<Props> = ({isOpen = false, items = [], title, setCategory, category}) => {
     return (
         <ContainerSidebar isOpen={isOpen}>
             <Title tagTitle={'h1'}>
@@ -23,7 +25,7 @@ export const Sidebar: React.FC<Props> = ({isOpen = false, items = [], title}) =>
             </Title>
             <div className={'list'}>
                 {items.map((item) => (
-                    <Button key={item.key} color={colorCategory[item.key]}> {item.name}</Button>
+                    <Button className={item.key === category? 'active': ''} key={item.key}  color={colorCategory[item.key]} onClick={()=> setCategory(item.key)}> {item.name}</Button>
                 ))}
             </div>
         </ContainerSidebar>

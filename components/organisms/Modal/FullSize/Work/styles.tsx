@@ -8,7 +8,7 @@ export const ContainerModalWork = styled(motion.div)<Props>`
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 11;
+  z-index: 3;
   overflow: hidden;
   max-width: ${breakpoint.lg};
   max-height: 100vh;

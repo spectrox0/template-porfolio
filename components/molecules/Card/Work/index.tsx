@@ -2,13 +2,14 @@ import * as React from 'react';
 import {ContainerCardWork} from './styles'
 import {onMouseLeave, onMouseOver} from '../../../../helpers/cursor'
 import {WorkDesign} from "../../../../models/WorkDesign";
+import {CloudinaryImage} from "../../../atoms/Image/Cloudinary";
 
 interface Props {
-    onClick: (work: WorkDesign) => void
+    onClick: () => void
 }
 
 export const CardWork: React.FC<Props & WorkDesign> = ({
-                                                           img,
+                                                           image,
                                                            skills,
                                                            description,
                                                            date,
@@ -16,16 +17,13 @@ export const CardWork: React.FC<Props & WorkDesign> = ({
                                                            link,
                                                            name,
                                                            id,
-                                                           onClick
+                                                           onClick ,
                                                        }) => {
-    const selectWork = React.useCallback(() => {
-            onClick({img, name, id, skills, link, images, description, date})
-        }
-        , [img, name, id, skills, link, images, description, date])
+
 
     return (
-        <ContainerCardWork onClick={selectWork} onMouseOver={onMouseOver} onMouseLeave={onMouseLeave}>
-            <img src={img.src} alt={name}/>
+        <ContainerCardWork onMouseOver={onMouseOver} onMouseLeave={onMouseLeave} onClick={onClick}>
+            <CloudinaryImage image={image} alt={name}/>
             <div className={'info'}>
                 <h4> {name}</h4>
             </div>

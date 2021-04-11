@@ -7,10 +7,11 @@ import {EnumSkill} from "./Skill";
 export interface WorkDesign {
     name: string,
     id: number | string
-    date: Timestamp,
+    date: string,
     description?: MultiLang,
-    images: Image[],
-    img: Image,
+    images: string[],
+    image: string,
+    category: string,
     skills?: EnumSkill[] | (keyof typeof EnumSkill)[],
     link?: string
 }

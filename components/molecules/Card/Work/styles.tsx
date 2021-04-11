@@ -1,8 +1,11 @@
 import styled from "styled-components";
 import {fontFamily, paletteColorsDark} from "../../../../styles/variables";
+import {WorkDesign} from "../../../../models/WorkDesign";
 
-
-export const ContainerCardWork = styled.div`
+interface Props {
+    onClick: (work: WorkDesign) => void
+}
+export const ContainerCardWork = styled.div<Props>`
   overflow: hidden;
   width: 100%;
   height: 100%;

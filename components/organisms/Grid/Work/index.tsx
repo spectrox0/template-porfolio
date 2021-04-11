@@ -2,15 +2,14 @@ import * as React from 'react';
 import {WorkDesign} from "../../../../models/WorkDesign";
 import {CardWork} from "../../../molecules/Card/Work";
 import Masonry, {ResponsiveMasonry} from "react-responsive-masonry"
-import firebase from "firebase";
-const Timestamp = firebase.firestore.Timestamp;
+import Router from 'next/router'
 
 interface Props {
     works: WorkDesign[]
-    onClick?: (work: WorkDesign, coordinate: { x: number, y: number }, size: { width: number, height: number }) => void
+    onClick?: (work: WorkDesign) => void
 }
 
-export const GridWork: React.FC<Props> = ({works, onClick}) => {
+export const GridWork: React.FC<Props> = ({works}) => {
     return (
         <div className={'container'}>
             <ResponsiveMasonry
@@ -18,7 +17,9 @@ export const GridWork: React.FC<Props> = ({works, onClick}) => {
             >
                 <Masonry columnsCount={3} gutter="3px">
                     {works.map((work, i) => (
-                        <CardWork key={work.id} {...work} onClick={onClick}/>
+                        <CardWork key={work.id} {...work} onClick={() => {
+                            Router.push("/portfolio/" + work.id)
+                        }}/>
                     ))}
                 </Masonry>
             </ResponsiveMasonry>
