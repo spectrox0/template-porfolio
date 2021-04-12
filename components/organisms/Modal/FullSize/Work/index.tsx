@@ -85,8 +85,9 @@ export const ModalWork: React.FC<Props> = React.memo(function Component(props) {
                                     {props.work.images.length ?
                                         <CloudinaryImage
                                             className="img-background"
-                                            alt="" image={props.work.image}/> :
-                                        <CarouselWork images={[props.work.image,...props.work.images]}/>}
+                                            alt=""
+                                            image={props.work.image}/> :
+                                        <CarouselWork images={[props.work.image, ...props.work.images]}/>}
                                 </Box>
 
                             </div>

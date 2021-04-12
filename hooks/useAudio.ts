@@ -6,11 +6,10 @@ export const useAudio = (url: string, initialValue: boolean = false): [playing: 
         const [playing, setPlaying] = useState<boolean>(false);
 
         const toggle: () => void = () => {
-            setPlaying(!playing)
+            setPlaying(prevState => !prevState)
         }
 
         useEffect(() => {
-
                 playing ? audio.play() : audio.pause();
             },
             [playing]
