@@ -10,6 +10,7 @@ export const ContainerImageProfile = styled.div<Props>`
   position: relative;
   width: 100%;
   z-index: -1;
+
   img {
     border-radius: 50%;
     width: 100%;
@@ -23,7 +24,7 @@ export const ContainerImageProfile = styled.div<Props>`
     &.image-blur {
       position: relative;
       z-index: 1;
-      transform: translate3d(0,0,0);
+      transform: translate3d(0, 0, 0);
       transition: opacity .5s ease-in-out .4s;
       opacity: ${({load}) => +!load};
     }

@@ -1,6 +1,6 @@
 import * as React from 'react';
 import {ContainerInput} from "./styles";
-import {Field, FieldAttributes, FieldInputProps, FieldProps} from "formik";
+import {Field, FieldAttributes,} from "formik";
 
 interface Props {
     label: string,
@@ -8,11 +8,11 @@ interface Props {
     id: string,
 }
 
-export const Input: React.FC<FieldAttributes<Props>> = ({as ,className, label, id,...rest}) => {
+export const Input: React.FC<FieldAttributes<Props>> = ({as, className, label, id, ...rest}) => {
     return (
-        <ContainerInput className={className} textarea={as==='textarea'}>
+        <ContainerInput className={className} textarea={as === 'textarea'}>
             <Field id={id} as={as} {...rest} />
-            <div className={'effect-underline'} />
+            <div className={'effect-underline'}/>
         </ContainerInput>
     )
 }

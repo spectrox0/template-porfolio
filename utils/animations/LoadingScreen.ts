@@ -1,4 +1,3 @@
-
 export const animationLoadingScreenVariant = {
     initial: {
         opacity: 0,
@@ -21,7 +20,7 @@ export const animationLoadingScreenVariant = {
 
 export const propsPage = {
     variants: animationLoadingScreenVariant,
-    animate:"enter",
-    initial:"initial",
-    exit:"exit"
+    animate: "enter",
+    initial: "initial",
+    exit: "exit"
 }

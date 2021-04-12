@@ -1,14 +1,17 @@
 import styled from "styled-components";
 import {paletteColorsDark} from "../../../styles/variables";
+
 interface Props {
-    color?:string
+    color?: string
 }
+
 export const ContainerService = styled.div`
-   max-width: 80%;
+  max-width: 80%;
   margin: 0 auto;
   display: flex;
   align-items: center;
   flex-direction: column;
+
   .icon {
     opacity: 0.7;
     display: flex;
@@ -18,9 +21,10 @@ export const ContainerService = styled.div`
     border-radius: 50%;
     border-top: solid 1px #fff;
     border-right: solid 1px #fff;
-    box-shadow: 0 0 3px inset#fff;
+    box-shadow: 0 0 3px inset #fff;
     color: ${({color}) => color || paletteColorsDark.primary};
     font-size: 4em;
+
     svg {
       max-width: 90%;
       max-height: 90%;

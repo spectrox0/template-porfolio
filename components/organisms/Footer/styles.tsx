@@ -9,11 +9,12 @@ export const ContainerFooter = styled.footer`
   z-index: 10;
   max-width: ${breakpoint.xl};
   width: 100%;
-  flex:1;
+  flex: 1;
   align-items: flex-end;
   justify-content: space-between;
   display: flex;
   transform: translateX(-50%);
+
   .select-locale {
     display: flex;
     flex-wrap: wrap;

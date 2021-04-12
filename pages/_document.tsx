@@ -41,9 +41,10 @@ class MyDocument extends Document<Props> {
                 <Head>
                     <meta charSet="utf-8"/>
                     <meta
-                        name="viewport"
+                        name=""
                         content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no"
                     />
+                    <link rel="shortcut icon" href="/ico/lotus.png" />
                     {styleTags}
                     <link rel="preconnect" href="https://fonts.gstatic.com"/>
                     <link
@@ -67,7 +68,7 @@ class MyDocument extends Document<Props> {
                         property="og:description"
                         content="Portfolio Viviana Tepedino, web and mobile design ,UI, UX,  SAP "
                     />
-                    <meta property="og:image" content={'images/bg/bg8.jpg'}/>
+                    <meta property="og:image" content={'images/background_one.jpg'}/>
                     <script
                         async
                         src="https://www.googletagmanager.com/gtag/js?id=UA-145358412-2"

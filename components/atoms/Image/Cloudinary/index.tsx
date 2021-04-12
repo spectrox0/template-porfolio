@@ -4,10 +4,10 @@ import {Image, Placeholder, Transformation} from 'cloudinary-react'
 interface Props {
     image: string,
     alt: string,
-    className?:string
+    className?: string
 }
 
-export const CloudinaryImage: React.FC<Props> = ({image, alt, className=""}) => {
+export const CloudinaryImage: React.FC<Props> = ({image, alt, className = ""}) => {
 
     return (
         <Image

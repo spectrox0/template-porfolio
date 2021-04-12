@@ -10,7 +10,7 @@ interface Props {
 export const ImageProfile: React.FC<Props & PropsImage> = ({
                                                                width = '35rem',
                                                                height = '100%',
-    className,
+                                                               className,
                                                                ...rest
                                                            }) => {
     const [load, setLoad] = React.useState<boolean>(false)
