@@ -9,7 +9,7 @@ interface Props {
     isOpen?: boolean,
     items?: Item[],
     title: string
-    setCategory: (key:string) => void,
+    setCategory: (key: string) => void,
     category: string
 }
 
@@ -19,18 +19,18 @@ export interface Item {
 }
 
 export const Sidebar: React.FC<Props> = ({isOpen = false, items = [], title, setCategory, category}) => {
-     const {formatMessage: t} = useIntl()
+    const {formatMessage: t} = useIntl()
     return (
         <ContainerSidebar isOpen={isOpen}>
             <Title tagTitle={'h1'} className={'text-capitalize'}>
-                {t({id:title})}
+                {t({id: title})}
             </Title>
             <div className={'list'}>
                 {items.map((item) => (
-                    <Button className={item.key === category? 'active': ''}
+                    <Button className={item.key === category ? 'active' : ''}
                             key={item.key}
                             color={colorCategory[item.key]}
-                            onClick={()=> setCategory(item.key)}> {t({id:item.name})}</Button>
+                            onClick={() => setCategory(item.key)}> {t({id: item.name})}</Button>
                 ))}
             </div>
         </ContainerSidebar>

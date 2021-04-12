@@ -1,4 +1,3 @@
-
 export const animationAlertVariant = {
     initial: {
         opacity: 0,
@@ -6,7 +5,7 @@ export const animationAlertVariant = {
     },
     enter: {
         opacity: 1,
-        y:0,
+        y: 0,
         transition: {
             delay: 0.4,
             duration: 0.5,
@@ -25,9 +24,9 @@ export const animationAlertVariant = {
 
 export const propsAlertAnimation = {
     variants: animationAlertVariant,
-    animate:"enter",
-    initial:"initial",
-    exit:"exit"
+    animate: "enter",
+    initial: "initial",
+    exit: "exit"
 }
 
 
@@ -54,7 +53,7 @@ export const animationAlertBackdropVariant = {
 
 export const propsAlertBackdropAnimation = {
     variants: animationAlertBackdropVariant,
-    animate:"enter",
-    initial:"initial",
-    exit:"exit"
+    animate: "enter",
+    initial: "initial",
+    exit: "exit"
 }

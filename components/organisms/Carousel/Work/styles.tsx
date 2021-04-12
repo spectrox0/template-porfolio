@@ -23,6 +23,7 @@ export const ContainerCarouselWork = styled(MDBCarousel)`
     height: 100%;
     z-index: -1;
     display: block;
+
     img {
       object-position: center center;
       object-fit: cover;

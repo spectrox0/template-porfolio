@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {Props} from "./index";
-import {breakpoint, heightNavbar, paletteColorsDark} from "../../../../../styles/variables";
+import {breakpoint, paletteColorsDark} from "../../../../../styles/variables";
 import {motion} from "framer-motion";
 
 
@@ -12,14 +12,16 @@ export const ContainerModalWork = styled(motion.div)<Props>`
   overflow: hidden;
   max-width: ${breakpoint.lg};
   max-height: 100vh;
-  width:100%;
+  width: 100%;
+
   .modal-inner {
     max-height: 100vh;
   }
+
   .row {
     margin: 0;
   }
-  
+
 
   .img-background {
     position: absolute;
@@ -32,12 +34,14 @@ export const ContainerModalWork = styled(motion.div)<Props>`
     object-fit: cover;
     opacity: 0.7;
   }
+
   .carousel-inner {
     overflow: hidden;
-    &,img {
+
+    &, img {
       border-radius: 10px;
     }
-    
+
   }
 
   .options-image {
@@ -57,4 +61,4 @@ export const ContainerBackdrop = styled(motion.div)`
   position: absolute;
   top: 0;
   left: 0;
-  `
+`

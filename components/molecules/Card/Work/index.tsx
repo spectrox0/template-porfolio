@@ -17,7 +17,7 @@ export const CardWork: React.FC<Props & WorkDesign> = ({
                                                            link,
                                                            name,
                                                            id,
-                                                           onClick ,
+                                                           onClick,
                                                        }) => {
 
 

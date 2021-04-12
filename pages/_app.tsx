@@ -1,6 +1,5 @@
 import type {AppProps} from 'next/app'
 import * as React from 'react'
-import '../firebase.config'
 import {Layout} from '../components/organisms/Layout/Default'
 import {LoadingRoute} from '../components/organisms/LoadingRoute'
 import 'react-perfect-scrollbar/dist/css/styles.css'

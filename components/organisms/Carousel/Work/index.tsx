@@ -25,7 +25,7 @@ export const CarouselWork: React.FC<Props> = ({images}) => {
                             className={'w-100 h-100 flex-grow-1'}>
                             <div className="image-foreground">
                                 <CloudinaryImage
-                                alt="" image={item}/>
+                                    alt="" image={item}/>
                             </div>
                             <CloudinaryImage
                                 className="d-block w-100 h-100 image-carousel"

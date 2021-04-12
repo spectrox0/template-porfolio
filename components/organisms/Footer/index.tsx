@@ -23,7 +23,7 @@ export const Footer: React.FC<Props> = () => {
     return (
         <ContainerFooter>
             <BarContact/>
-            <Player url={"/music/attack_titan.mp3"} className={'my-3 mx-2'} />
+            <Player url={"/music/attack_titan.mp3"} className={'my-3 mx-2'}/>
             <div className={'select-locale my-2'}>
                 {locales.map((item) => (
                     <div key={item.key} className={'container-img'}>

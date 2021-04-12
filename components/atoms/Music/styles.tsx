@@ -7,10 +7,10 @@ interface Props {
 
 const animation = keyframes`
   0% {
-    transform: rotate(0deg) translate3d(0,0,0);
+    transform: rotate(0deg) translate3d(0, 0, 0);
   }
   100% {
-    transform: rotate(360deg) translate3d(0,0,0);
+    transform: rotate(360deg) translate3d(0, 0, 0);
   }
 `
 export const ContainerPlayerMusic = styled.label<Props>`
@@ -26,7 +26,8 @@ export const ContainerPlayerMusic = styled.label<Props>`
   height: 2.5rem;
   width: 2.5rem;
   color: ${({active}) => active ? paletteColorsDark.primary : "#fff"};
-  transform: translate3d(0,0,0);
+  transform: translate3d(0, 0, 0);
+
   &:hover {
     opacity: 0.8;
     border-color: ${({active}) => !active ? paletteColorsDark.primary : "#fff"};

@@ -4,7 +4,7 @@ import {ContainerSpinner} from './styles'
 export const Spinner: React.FC = () => {
     return (
         <ContainerSpinner>
-            <div className="spinner" />
+            <div className="spinner"/>
         </ContainerSpinner>
     )
 }

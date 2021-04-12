@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {fontFamily, primaryFontFamily} from "../../../styles/variables";
+import {primaryFontFamily} from "../../../styles/variables";
 
 interface Props {
     fontSize?: string,

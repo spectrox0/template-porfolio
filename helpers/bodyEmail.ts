@@ -2,7 +2,6 @@ import {ContactInfo} from "../models/ContactInfo";
 import {backgroundImage} from "../config";
 import {paletteColorsDark} from "../styles/variables";
 
-const stylesBody = ""
 const stylesText = "box-sizing: border-box; padding:1rem; font-size: 1em; letter-spacing: 0.11em; color: #fff; margin: 1rem 0;"
 const stylesTextBold = "box-sizing: border-box;text-shadows: 0 0 3px rgba(255,255,255, 0.8)";
 const stylesTitle = `

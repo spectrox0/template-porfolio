@@ -9,7 +9,7 @@ interface Props {
 }
 
 export const DonutChart: React.FC<Props> = ({percentage, delay = 0, color}) => {
-    const {countUp, reset, start} = useCountUp({end: percentage, delay})
+    const {countUp} = useCountUp({end: percentage, delay})
     return (
         <ContainerDonutChart color={color} active={true} viewBox="0 0 36 36" className="circular-chart orange">
             <path

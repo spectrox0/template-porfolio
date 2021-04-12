@@ -9,6 +9,6 @@ export const ContainerScreenLoading = styled(motion.div)`
   left: 0;
   width: 100%;
   height: 100vh;
-  background-color: rgba(20,20,20, 0.7);
+  background-color: rgba(20, 20, 20, 0.7);
 
 `

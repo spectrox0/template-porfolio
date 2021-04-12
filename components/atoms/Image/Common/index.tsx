@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import {ContainerImage} from "./styles";
 
 
@@ -12,7 +12,7 @@ export interface Props {
     setLoad?: (value: boolean) => void
 }
 
-export const Image: React.FC<Props> = ({alt = "", setLoad,refImage, ...rest}) => {
+export const Image: React.FC<Props> = ({alt = "", setLoad, refImage, ...rest}) => {
     return (
         <ContainerImage
             alt={alt}

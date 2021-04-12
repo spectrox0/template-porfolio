@@ -20,10 +20,8 @@ export const useAudio = (url: string, initialValue: boolean = false): [playing: 
                     audio.loop = true;
                 } else {
                     const end = () => {
-                        if (this) {
-                            this.currentTime = 0;
-                            this.play();
-                        }
+                        audio.currentTime = 0;
+                        audio.play();
                     }
                     audio.addEventListener('ended', end, false);
 
