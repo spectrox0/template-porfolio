@@ -31,8 +31,8 @@ export const backgroundImage: string = require("images/background_two.jpg?webp")
 export const emailFromContact: string = "alejandro.velazco@correo.unimet.edu.ve"
 
 export const descriptionAboutMe: MultiLang = {
-    "es": "Hola soy Viviana",
-    'en': "Hi i'm Viviana"
+    "es": "Hola soy Viviana, Ingeniera de sistemas ",
+    'en': "Hi i'm Viviana, Systems Engineer "
 }
 export const urlCV = '/'
 export const socialNetwork: SocialNetworks = {
@@ -69,19 +69,19 @@ export const skills: Skill [] = [
         category: 'sap',
         key: EnumSkill.sap,
         name: 'SAP',
-        percentage: 80
+        percentage: 70
     },
     {
         category: 'web',
         key: EnumSkill.typescript,
         name: 'Typescript',
-        percentage: 50
+        percentage: 30
     },
     {
         category: 'design',
         key: EnumSkill.figma,
         name: 'Figma',
-        percentage: 80
+        percentage: 70
     },
     {
         category: 'design',
@@ -93,31 +93,31 @@ export const skills: Skill [] = [
         category: 'web',
         key: EnumSkill.css3,
         name: 'CSS3',
-        percentage: 50
+        percentage: 40
     },
     {
         category: 'web',
         key: EnumSkill.angular,
         name: 'Angular +2',
-        percentage: 50
+        percentage: 40
     },
     {
         category: 'web',
         key: EnumSkill.vue,
         name: 'Vue.js',
-        percentage: 40
+        percentage: 30
     },
     {
         category: 'web',
         key: EnumSkill.react,
         name: 'React.js',
-        percentage: 30
+        percentage: 20
     },
     {
         category: 'web',
         key: EnumSkill.firebase,
         name: 'Firebase',
-        percentage: 50
+        percentage: 40
     }
 ].sort((a, b) => {
     if (a.category > b.category) return 1; else return -1

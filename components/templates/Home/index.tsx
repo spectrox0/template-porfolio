@@ -17,7 +17,7 @@ export const HomeTemplate: React.FC = () => {
 
     useEffect(() => {
         init([
-            t({id: "Engineer Systems"}),
+            t({id: "Systems Engineer"}),
             t({id: "SAP Architecture"}),
             t({id: "UI/UX Design"}),
         ])
