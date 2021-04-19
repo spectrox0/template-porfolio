@@ -58,7 +58,7 @@ export const ModalWork: React.FC<Props> = (props) => {
                                 </div>
                                 <div className={'d-flex flex-wrap w-100 px-2'}>
                                     <Button fontSize={'1.2em'} className={'flex-grow-1 mx-2'}
-                                            classNameButton={'px-2 py-2'}> <AiOutlineLink/>
+                                            classNameButton={'px-2 py-2'} href={props.work.link} target={'_blank'}> <AiOutlineLink/>
                                         {t({id: 'See project'})}
                                     </Button>
                                     <Button className={'flex-grow-1 mx-2'} fontSize={'1.2em'}
