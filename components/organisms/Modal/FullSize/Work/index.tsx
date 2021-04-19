@@ -82,7 +82,7 @@ export const ModalWork: React.FC<Props> = (props) => {
                         </div>
                         <div className={'col-md-5 d-flex flex-column'}>
                             <Box className={'flex-grow-1 my-2 overflow-hidden box-carousel'}>
-                                {props.work.images.length ?
+                                {!props.work.images.length ?
                                     <CloudinaryImage
                                         className="img-background"
                                         alt=""
