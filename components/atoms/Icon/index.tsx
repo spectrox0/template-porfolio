@@ -21,6 +21,8 @@ import {AiOutlinePhone} from 'react-icons/ai'
 import {DiCss3, DiDjango, DiFirebase, DiMongodb, DiMysql} from 'react-icons/di'
 import {GrGraphQl} from 'react-icons/gr'
 import {
+    SiAdobeillustrator,
+    SiAdobephotoshop,
     SiAdobexd,
     SiAnaconda,
     SiFigma,
@@ -34,10 +36,9 @@ import {
     SiTensorflow,
     SiTypescript
 } from 'react-icons/si'
-import {GiArtificialIntelligence} from 'react-icons/gi'
+import {GiArtificialIntelligence, GiPaintBrush} from 'react-icons/gi'
 import {MdMailOutline} from 'react-icons/md'
 import {IoIosDesktop} from "react-icons/io";
-import {GiPaintBrush} from "react-icons/gi";
 
 interface Props {
     size?: string
@@ -80,6 +81,8 @@ export const Icons = {
     'pandas': (props ?: Props): JSX.Element => <GiArtificialIntelligence {...props}/>,
     'figma': (props ?: Props): JSX.Element => <SiFigma {...props}/>,
     'adobe xd': (props ?: Props): JSX.Element => <SiAdobexd {...props}/>,
+    "photoshop": (props ?: Props): JSX.Element => <SiAdobephotoshop {...props}/>,
+    "illustrator": (props ?: Props): JSX.Element => <SiAdobeillustrator {...props}/>,
     'sap': (props ?: Props): JSX.Element => <SiSap {...props}/>,
     'design': (props ?: Props): JSX.Element => <GiPaintBrush{...props} />,
     'web': (props ?: Props): JSX.Element => <IoIosDesktop {...props} />,

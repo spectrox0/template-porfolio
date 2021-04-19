@@ -5,7 +5,7 @@ import {onMouseLeave, onMouseOver} from '../../../../helpers/cursor'
 interface Props {
     color?: string
     classNameButton?: string
-    fontSize?:string,
+    fontSize?: string,
 }
 
 export const Button: React.FC<Props
@@ -14,7 +14,7 @@ export const Button: React.FC<Props
                                                  color,
                                                  className,
                                                  classNameButton,
-    fontSize,
+                                                 fontSize,
                                                  children,
                                                  ...rest
                                              }) => {

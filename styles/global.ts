@@ -1,5 +1,5 @@
 import {createGlobalStyle} from 'styled-components';
-import {fontFamily, paletteColorsDark, primaryFontFamily} from "./variables";
+import {paletteColorsDark, primaryFontFamily} from "./variables";
 
 export const GlobalStyle = createGlobalStyle`
   html {
@@ -8,6 +8,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     margin: 0;
   }
+
   body {
     font-weight: 300;
     padding: 0;
@@ -17,16 +18,27 @@ export const GlobalStyle = createGlobalStyle`
     width: 100%;
     height: 100%;
     -webkit-tap-highlight-color: transparent !important;
-   // cursor: none !important;
+    // cursor: none !important;
     overflow: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     text-rendering: optimizeLegibility;
     font-family: ${primaryFontFamily};
     min-height: 100%;
+
+    a {
+      &, &:hover {
+        text-decoration: none;
+        color: inherit;
+        border-color: inherit;
+      }
+
+    }
+
     &, * {
       box-sizing: border-box;
     }
+
     @media (max-width: 600px) {
       font-size: .75rem;
     }
@@ -38,6 +50,7 @@ export const GlobalStyle = createGlobalStyle`
       font-size: .9rem;
     }
   }
+
   button,
   select,
   h1,
@@ -63,7 +76,7 @@ export const GlobalStyle = createGlobalStyle`
   *:before {
     box-sizing: border-box;
   }
-  
+
 
   div {
     -webkit-touch-callout: none;
@@ -76,13 +89,15 @@ export const GlobalStyle = createGlobalStyle`
     .ps__thumb-y {
       background-color: ${paletteColorsDark.primary};
     }
+
     &:hover > .ps__thumb-y,
     &:focus > .ps__thumb-y,
     &.ps--clicking .ps__thumb-y {
-      background-color:${paletteColorsDark.primary};
+      background-color: ${paletteColorsDark.primary};
       width: 6px;
     }
   }
+
   .ps .ps__rail-x:hover,
   .ps .ps__rail-y:hover,
   .ps .ps__rail-x:focus,

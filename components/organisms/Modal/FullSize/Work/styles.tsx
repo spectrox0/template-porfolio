@@ -34,6 +34,18 @@ export const ContainerModalWork = styled(motion.div)<Props>`
     object-fit: cover;
     opacity: 0.7;
   }
+  .img-contain {
+    position: absolute;
+    top:0;
+    left:0;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    border: none;
+    object-fit: contain;
+    object-position: center center;
+  }
+  
 
   .carousel-inner {
     overflow: hidden;
