@@ -57,10 +57,14 @@ export const ModalWork: React.FC<Props> = (props) => {
                                     </Text>
                                 </div>
                                 <div className={'d-flex flex-wrap w-100 px-2'}>
-                                    <Button fontSize={'1.2em'} className={'flex-grow-1 mx-2'}
-                                            classNameButton={'px-2 py-2'} href={props.work.link} target={'_blank'}> <AiOutlineLink/>
-                                        {t({id: 'See project'})}
-                                    </Button>
+                                    <a href={props.work.link} target={'_blank'} className={'d-flex flex-grow-1'}>
+                                        <Button fontSize={'1.2em'} className={'flex-grow-1 mx-2'}
+                                                classNameButton={'px-2 py-2'}
+                                        >
+                                            <AiOutlineLink/>
+                                            {t({id: 'See project'})}
+                                        </Button>
+                                    </a>
                                     <Button className={'flex-grow-1 mx-2'} fontSize={'1.2em'}
                                             classNameButton={'px-2 py-2'}
                                             onClick={props.close}>
@@ -70,7 +74,7 @@ export const ModalWork: React.FC<Props> = (props) => {
                             <Box className={'my-2'}>
                                 <Title className={'my-3'} fontSize={'1.1em'} fontWeight={'500'}
                                        tagTitle={'h4'}>
-                                    Related Skills
+                                    {t({id: 'Related Skills'})}
                                 </Title>
                                 <div className={'d-flex flex-wrap w-100'}>
                                     {props.work.skills && props.work.skills.map((item, key) => (
@@ -83,10 +87,16 @@ export const ModalWork: React.FC<Props> = (props) => {
                         <div className={'col-md-5 d-flex flex-column'}>
                             <Box className={'flex-grow-1 my-2 overflow-hidden box-carousel'}>
                                 {!props.work.images.length ?
-                                    <CloudinaryImage
-                                        className="img-background"
-                                        alt=""
-                                        image={props.work.image}/> :
+                                    <>
+                                        <CloudinaryImage
+                                            className="img-background"
+                                            alt=""
+                                            image={props.work.image}/>
+                                        <CloudinaryImage
+                                            className="img-contain"
+                                            alt=""
+                                            image={props.work.image}/>
+                                    </> :
                                     <CarouselWork images={[props.work.image, ...props.work.images]}/>}
                             </Box>
 
