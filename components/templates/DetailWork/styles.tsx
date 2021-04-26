@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {heightNavbar} from "../../../styles/variables";
+import {heightFooter, heightNavbar} from "../../../styles/variables";
 
 
 export const ContainerTemplateWork = styled.section`
@@ -7,5 +7,5 @@ export const ContainerTemplateWork = styled.section`
   width: 100%;
   height: calc(100% - ${heightNavbar});
   left: 0;
-  bottom: 0;
+  bottom: calc(${heightFooter} + 1rem);
 `
