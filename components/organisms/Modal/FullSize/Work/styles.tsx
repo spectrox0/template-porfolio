@@ -1,21 +1,22 @@
 import styled from "styled-components";
 import {Props} from "./index";
-import {breakpoint, paletteColorsDark} from "../../../../../styles/variables";
+import {heightFooter, heightNavbar, paletteColorsDark} from "../../../../../styles/variables";
 import {motion} from "framer-motion";
 
 
 export const ContainerModalWork = styled(motion.div)<Props>`
-  position: fixed;
+  position: relative;
   top: 0;
   left: 0;
   z-index: 3;
-  overflow: hidden;
-  max-width: ${breakpoint.lg};
-  max-height: 100vh;
+  margin: 0 auto;
+  flex: 1;
+  height: 100%;
   width: 100%;
+  padding: calc(1% + .2rem);
 
   .modal-inner {
-    max-height: 100vh;
+  padding-bottom: calc(${heightFooter} + 5rem);
   }
 
   .row {

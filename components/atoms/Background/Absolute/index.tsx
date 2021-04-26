@@ -17,7 +17,7 @@ export const BackgroundAbsolute = ({
                                        className = '',
                                        position = 'center',
                                        colorBackdrop = "#000",
-                                       opacityBackdrop = 0.4,
+                                       opacityBackdrop = 0.5,
                                    }) => {
     return (
         <Styles.Div className={className}

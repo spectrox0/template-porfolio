@@ -6,7 +6,6 @@ import {Text} from "../../../../atoms/Text";
 import {Title} from "../../../../atoms/Title";
 import {AiOutlineLink} from "react-icons/ai";
 import {Skill} from "../../../../atoms/Skill";
-import PerfectScrollbar from "react-perfect-scrollbar";
 import {useRouter} from "next/router";
 import {CarouselWork} from "../../../Carousel/Work";
 import {Box} from "../../../../atoms/Box";
@@ -33,16 +32,16 @@ export const ModalWork: React.FC<Props> = (props) => {
     const {formatMessage: t} = useIntl()
     return props.work && (
         <ContainerModalWork {...propsModalWorkAnimation}>
-            <PerfectScrollbar>
-                <div className={'modal-inner'}>
-                    <div className={'row w-100 h-100'}>
-                        <div className={'col-md-7 d-flex flex-column'}>
 
-                            <Box className={'flex-grow-1 my-2 d-flex flex-column'}>
-                                <Title tagTitle={'h3'} fontSize={'2em'} fontWeight={'500'}
-                                       className={'my-2 flex-grow-0'}>
-                                    {props.work.name}
-                                </Title>
+            <div className={'modal-inner'}>
+                <div className={'row w-100 h-100'}>
+                    <div className={'col-md-7 d-flex flex-column'}>
+
+                        <Box className={'flex-grow-1 my-2 d-flex flex-column'}>
+                            <Title tagTitle={'h3'} fontSize={'2em'} fontWeight={'500'}
+                                   className={'my-2 flex-grow-0'}>
+                                {props.work.name}
+                            </Title>
                                 <div className={'flex-grow-1'}>
                                     <Text className={'my-2'}>
                                         {new Date(props.work.date).toLocaleString(
@@ -101,8 +100,8 @@ export const ModalWork: React.FC<Props> = (props) => {
                             </Box>
 
                         </div>
-                    </div>
                 </div>
-            </PerfectScrollbar>
-        </ContainerModalWork>)
+            </div>
+        </ContainerModalWork>
+    )
 }

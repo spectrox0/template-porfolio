@@ -18,6 +18,7 @@ export const ContainerSidebar = styled.div<Props>`
   max-width: 100%;
   z-index: 2;
   height: calc(100% - ${heightNavbar});
-  background-image: linear-gradient(to top, rgba(0, 0, 0, 2), rgba(0, 0, 0, 0.9) 0, transparent);
+  background-image: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9) 0, transparent);
+  
 
 `
