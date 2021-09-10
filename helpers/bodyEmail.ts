@@ -43,7 +43,7 @@ export const bodyEmail = ({email, name, message, subject}: ContactInfo) => {
                    backdrop-filter: blur(2px);
                    box-shadow: 0 0 8px rgba(0,0,0,0.5);
                     "> 
-                     <h1 style="${stylesTitle}"> Hi <b style="${stylesTextBold}"> Viviana </b> , you have been contacted !  </h1>
+                     <h1 style="${stylesTitle}"> Hi <b style="${stylesTextBold}"> Paola </b> , you have been contacted !  </h1>
                      <p style="${stylesText}" > <b style="${stylesTextBold}"> EMAIL </b> : ${email}  </p> 
                      <p style="${stylesText}"> <b style="${stylesTextBold}"> NAME  </b> : ${name}  </p> 
                      <p style="${stylesText}"> <b style="${stylesTextBold}" > SUBJECT </b> : ${subject}  </p> 

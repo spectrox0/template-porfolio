@@ -22,7 +22,7 @@ const Portfolio: React.FC<Props> = ({works = []}) => {
     return (
         <>
             <Head>
-                <title>Viviana Tepedino - {t({id:"Portfolio"})} </title>
+                <title>Paola - {t({id:"Portfolio"})} </title>
             </Head>
             <DynamicComponent works={works}/>
         </>

@@ -22,34 +22,34 @@ interface CategoriesWork {
     key: keyof typeof EnumCategories
 }
 
-export const firstName = 'Viviana'
-export const lastName = 'Tepedino'
+export const firstName = 'Paola'
+export const lastName = 'Outeda'
 export const fullName = `${firstName} ${lastName}`
-export const imgProfile: string = require('images/profileImage.jpg?webp')
-export const imgProfileBlur: string = require('images/profileImage.jpg?lqip')
+export const imgProfile: string = require('images/profileImage.png?webp')
+export const imgProfileBlur: string = require('images/profileImage.png?lqip')
 export const backgroundImage: string = require("images/background_two.jpg?webp")
 export const emailFromContact: string = "alejandro.velazco@correo.unimet.edu.ve"
 
 export const descriptionAboutMe: MultiLang = {
-    "es": "Hola soy Viviana, Ingeniera de sistemas ",
-    'en': "Hi i'm Viviana, Systems Engineer "
+    "es": "Hola soy Paola, Ingeniera de sistemas ",
+    'en': "Hi i'm Paola, Systems Engineer "
 }
 export const urlCV = '/'
 export const socialNetwork: SocialNetworks = {
     linkedin: {
         name: "Linkedin",
         value: "",
-        href: "https://www.linkedin.com/in/viviana-tepedino-9469471b8/"
+        href: ""
     },
     github: {
         name: "Github",
-        value: "VivianaTC",
-        href: "https://github.com/VivianaTC/"
+        value: "Paola",
+        href: "https://github.com/spectrox0"
     },
     email: {
         name: "Email",
-        href: "mailto: vivitepedino@gmail.com",
-        value: "vivitepedino@gmail.com"
+        href: "mailto: alejanvelazco2008@gmail.com",
+        value: "alejanvelazco2008@gmail.com"
     }
 }
 export const infoBiography: { name: string, value: string | number } [] = [{

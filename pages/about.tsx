@@ -9,7 +9,7 @@ const About: React.FC = () => {
     return (
         <>
             <Head>
-                <title>Viviana Tepedino - {t({id: "About me"})}</title>
+                <title>Paola - {t({id: "About me"})}</title>
             </Head>
             <AboutTemplate/>
         </>

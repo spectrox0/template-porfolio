@@ -52,21 +52,21 @@ class MyDocument extends Document<Props> {
                         rel="stylesheet"/>
                     <meta
                         name="description"
-                        content="Portfolio Viviana Tepedino, Systems Engineer"
+                        content="Portfolio Paola, Systems Engineer"
                     />
-                    <meta property="og:title" content="Portfolio Viviana Tepedino"/>
+                    <meta property="og:title" content="Portfolio Paola"/>
                     <meta
                         name="og:description"
-                        content="Portfolio Viviana Tepedino Systems Engineer"
+                        content="Portfolio Paola Systems Engineer"
                     />
                     <meta
                         name="keywords"
-                        content="viviana, viviana tepedino ,UX, UI, tepedino, design,figma, adobe xd,mobile,web,SAP"
+                        content="paola, ,UX, UI , design,figma, adobe xd,mobile,web,SAP"
                     />
 
                     <meta
                         property="og:description"
-                        content="Portfolio Viviana Tepedino, web and mobile design ,UI, UX,  SAP "
+                        content="Portfolio PaolaF, web and mobile design ,UI, UX,  SAP "
                     />
                     <meta property="og:image" content={'images/background_one.jpg'}/>
                     <script

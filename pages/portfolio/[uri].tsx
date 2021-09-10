@@ -18,7 +18,7 @@ const DetailWork: React.FC<Props> = ({work}) => {
     }
     return <>
         <Head>
-            <title>Viviana Tepedino - {work.name}</title>
+            <title>Paola - {work.name}</title>
         </Head>
         <TemplateDetailWork work={work} back={back}/>
     </>

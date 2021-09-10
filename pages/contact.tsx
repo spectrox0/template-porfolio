@@ -8,7 +8,7 @@ const Contact: React.FC = () => {
     return (
         <>
             <Head>
-                <title>Viviana Tepedino - {t({id: "Contact"})}</title>
+                <title> Paola - {t({id: "Contact"})}</title>
             </Head>
             <ContactTemplate/>
         </>

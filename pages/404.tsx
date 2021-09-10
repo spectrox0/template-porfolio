@@ -14,7 +14,7 @@ const Error404: React.FC = () => {
             exit={{opacity: 0}}
         >
             <Head>
-                <title>Viviana Tepedino - 404</title>
+                <title>Paola - 404</title>
             </Head>
             <div className={'container'}>
                 <Box>
